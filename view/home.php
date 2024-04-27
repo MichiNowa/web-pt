@@ -1,4 +1,4 @@
-<?php require ('nav.php'); ?>
+<?php require ('header.php'); ?>
 
 
 <section class="hero-section" id="section_1">
