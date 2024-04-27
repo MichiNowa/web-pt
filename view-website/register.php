@@ -40,8 +40,9 @@
                         Already have an account? <a href="login.php">Login here</a>
                     </div>
 
+
+                </form>
             </div>
-            </form>
         </div>
     </div>
 </section>

@@ -82,9 +82,9 @@
                                 <textarea name="ticket-form-message" rows="3" class="form-control"
                                     id="ticket-form-message" placeholder="Additional Request"></textarea> -->
 
-
+                </form>
             </div>
-            </form>
+
         </div>
     </div>
 </section>

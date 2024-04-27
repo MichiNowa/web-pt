@@ -8,54 +8,24 @@
         <div class="row">
 
             <div class="col-12 mt-auto mb-5 text-center">
-                <small>a space to share codes</small>
-
-                <h1 class="text-white mb-5">Code Sphere 
-                <img src="../images/logo/logo-white.png" alt="" width="10%">
-                </h1>
-
-                <a class="btn custom-btn smoothscroll" href="login.php">Join Us</a>
+                <small>anything to share?</small>
             </div>
 
-            <!-- <div class="col-lg-12 col-12 mt-auto d-flex flex-column flex-lg-row text-center">
-                <div class="date-wrap">
-                    <h5 class="text-white">
-                        <i class="custom-icon bi-clock me-2"></i>
-                        10 - 12<sup>th</sup>, Dec 2023
-                    </h5>
-                </div>
+            <div class="col-lg-12 col-12 mx-auto">
+                <form class="custom-form ticket-form mb-5 mb-lg-0" action="#" method="post" role="form">
 
-                <div class="location-wrap mx-auto py-3 py-lg-0">
-                    <h5 class="text-white">
-                        <i class="custom-icon bi-geo-alt me-2"></i>
-                        National Center, United States
-                    </h5>
-                </div>
+                    <input type="text" name="ticket-form-name" id="ticket-form-name" class="form-control"
+                        placeholder="I squashed a few bugs today... :D" required>
 
-                <div class="social-share">
-                    <ul class="social-icon d-flex align-items-center justify-content-center">
-                        <span class="text-white me-3">Share:</span>
+                    <a href=""><img src="../images/icons/add-image.png" alt="" width="10%"></a>
 
-                        <li class="social-icon-item">
-                            <a href="#" class="social-icon-link">
-                                <span class="bi-facebook"></span>
-                            </a>
-                        </li>
+                    <div class="col-lg-4 col-md-10 col-8 mx-auto">
+                        <button type="submit" class="form-control">Post</button>
+                    </div>
+                </form>
+            </div>
 
-                        <li class="social-icon-item">
-                            <a href="#" class="social-icon-link">
-                                <span class="bi-twitter"></span>
-                            </a>
-                        </li>
 
-                        <li class="social-icon-item">
-                            <a href="#" class="social-icon-link">
-                                <span class="bi-instagram"></span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div> -->
         </div>
     </div>
 
@@ -161,8 +131,7 @@
             <div class="col-lg-5 col-12">
                 <div class="artists-thumb">
                     <div class="artists-image-wrap">
-                        <img src="../images/dev/arvin.jpg"
-                            class="artists-image img-fluid">
+                        <img src="../images/dev/arvin.jpg" class="artists-image img-fluid">
                     </div>
 
                     <div class="artists-hover">

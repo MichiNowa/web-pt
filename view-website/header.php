@@ -41,7 +41,7 @@
 
                     <div class="col-lg-12 col-12 d-flex flex-wrap">
                         <p class="d-flex me-4 mb-0">
-                            <i class="bi-person custom-icon me-2"></i>
+                            <i class="bi-heart custom-icon me-2"></i>
                             <strong class="text-dark">Welcome to Code Sphere</strong>
                         </p>
                     </div>
