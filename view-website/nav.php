@@ -29,7 +29,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_6">Contact</a>
+                            <a class="nav-link click-scroll" href="#section_4">Contact</a>
                         </li>
                     </ul>
 
