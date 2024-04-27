@@ -12,10 +12,10 @@
 
                 <h1 class="text-white mb-5">Code Sphere</h1>
 
-                <a class="btn custom-btn smoothscroll" href="#section_2">Let's begin</a>
+                <a class="btn custom-btn smoothscroll" href="login.php">Join Us</a>
             </div>
 
-            <div class="col-lg-12 col-12 mt-auto d-flex flex-column flex-lg-row text-center">
+            <!-- <div class="col-lg-12 col-12 mt-auto d-flex flex-column flex-lg-row text-center">
                 <div class="date-wrap">
                     <h5 class="text-white">
                         <i class="custom-icon bi-clock me-2"></i>
@@ -53,13 +53,13 @@
                         </li>
                     </ul>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 
     <div class="video-wrap">
         <video autoplay="" loop="" muted="" class="custom-video" poster="">
-            <source src="../video/pexels-2022395.mp4" type="video/mp4">
+            <source src="../video/coding.mp4" type="video/mp4">
 
             Your browser does not support the video tag.
         </video>
@@ -73,37 +73,34 @@
 
             <div class="col-lg-6 col-12 mb-4 mb-lg-0 d-flex align-items-center">
                 <div class="services-info">
-                    <h2 class="text-white mb-4">About Festava 2022</h2>
+                    <h2 class="text-white mb-4">About Code Sphere</h2>
 
-                    <p class="text-white">Festava Live is free CSS template provided by TemplateMo website. This
-                        layout is built on Bootstrap v5.2.2 CSS library. You are free to use this template for
-                        your commercial website.</p>
+                    <p class="text-white">Code Sphere is a vibrant online community tailored for developers and programmers to connect, collaborate, and share their coding expertise. Exchange code snippets, seek advice, and engage in discussions with like-minded individuals. Join Code Sphere today to unlock endless opportunities for networking, skill enhancement, and meaningful connections within the world of coding.</p>
 
                     <h6 class="text-white mt-4">Once in Lifetime Experience</h6>
 
-                    <p class="text-white">You are not allowed to redistribute the template ZIP file on any other
-                        website without a permission.</p>
+                    <p class="text-white">Share algorithms and seek out bugs and errors with the sharp eyes of your friends.</p>
 
-                    <h6 class="text-white mt-4">Whole Night Party</h6>
+                    <h6 class="text-white mt-4">Code Party</h6>
 
-                    <p class="text-white">Please tell your friends about our website. Thank you.</p>
+                    <p class="text-white">Tell your fellow programmers about this codespace and have a blast! :D</p>
                 </div>
             </div>
 
             <div class="col-lg-6 col-12">
                 <div class="about-text-wrap">
-                    <img src="../images/pexels-alexander-suhorucov-6457579.jpg" class="about-image img-fluid">
+                    <img src="../images/logo/codesphere-bg.png" class="about-image img-fluid">
 
                     <div class="about-text-info d-flex">
                         <div class="d-flex">
-                            <i class="about-text-icon bi-person"></i>
+                            <i class=""><img src="../images/logo/logo.png" width="50px" alt=""></i>
                         </div>
 
 
                         <div class="ms-4">
-                            <h3>a happy moment</h3>
+                            <h3>code with us</h3>
 
-                            <p class="mb-0">your amazing festival experience with us</p>
+                            <p class="mb-0">share your experiences with us</p>
                         </div>
                     </div>
                 </div>
@@ -119,7 +116,7 @@
         <div class="row justify-content-center">
 
             <div class="col-12 text-center">
-                <h2 class="mb-4">Meet Artists</h1>
+                <h2 class="mb-4">Meet the Devs</h1>
             </div>
 
             <div class="col-lg-5 col-12">
@@ -131,25 +128,25 @@
                     <div class="artists-hover">
                         <p>
                             <strong>Name:</strong>
-                            Madona
+                            Michi
                         </p>
 
                         <p>
                             <strong>Birthdate:</strong>
-                            August 16, 1958
+                            July 27, 2002
                         </p>
 
                         <p>
-                            <strong>Music:</strong>
-                            Pop, R&amp;B
+                            <strong>Position:</strong>
+                            Head Developer
                         </p>
 
-                        <hr>
+                        <!-- <hr>
 
                         <p class="mb-0">
                             <strong>Youtube Channel:</strong>
                             <a href="#">Madona Official</a>
-                        </p>
+                        </p> -->
                     </div>
                 </div>
             </div>
