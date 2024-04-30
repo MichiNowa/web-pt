@@ -36,7 +36,9 @@ body {
     margin-top: 10px;
 }
 
-
+.comment-p{
+    margin-left: 25px;
+}
 .profile-container {
     max-width: 1000px;
     margin-top: 50px ;
