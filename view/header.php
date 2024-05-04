@@ -23,6 +23,7 @@
 
     <link href="../css/templatemo-festava-live.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="profile.css">
 </head>
 
 <body>
@@ -55,6 +56,11 @@
                     Code Sphere
                     <img src="../images/logo/logo-white.png" alt="" width="30px">
                 </a>
+               
+                <div class="search d-flex align-items-center">
+    <input type="text" class="form-control me-2" placeholder="Search">
+    <button type="button" class="btn btn-danger">Search</button>
+</div>
 
                 <a href="login.php" class="btn custom-btn d-lg-none ms-auto me-4">Sign In</a>
 
@@ -74,7 +80,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_4">Notifications</a>
+                            <a class="nav-link click-scroll" href="notifrication.php">Notifications</a>
                         </li>
                     </ul>
 
