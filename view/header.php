@@ -23,7 +23,10 @@
 
     <link href="../css/templatemo-festava-live.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="profile.css">
+    <!-- <link rel="stylesheet" href="profile.css"> -->
+
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 
 <body>
@@ -56,13 +59,13 @@
                     Code Sphere
                     <img src="../images/logo/logo-white.png" alt="" width="30px">
                 </a>
-               
-                <div class="search d-flex align-items-center">
+
+                <!-- <div class="search d-flex align-items-center">
     <input type="text" class="form-control me-2" placeholder="Search">
     <button type="button" class="btn btn-danger">Search</button>
-</div>
+</div> -->
 
-                <a href="login.php" class="btn custom-btn d-lg-none ms-auto me-4">Sign In</a>
+                <!-- <a href="login.php" class="btn custom-btn d-lg-none ms-auto me-4">Sign In</a> -->
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -80,11 +83,14 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="notifrication.php">Notifications</a>
+                            <a class="nav-link click-scroll" href="notification.php">Notifications</a>
+                        </li>
+                        <li>
+                            <a href="login.php" class="btn custom-btn d-lg-block d-none">Account</a>
                         </li>
                     </ul>
 
-                    <a href="login.php" class="btn custom-btn d-lg-block d-none">Account</a>
+
                 </div>
             </div>
         </nav>
