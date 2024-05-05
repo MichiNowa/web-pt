@@ -39,7 +39,7 @@
 </section>
 
 
-<section class="about-section section-padding" id="section_2">
+<section class="about-section section-padding" id="">
     <div class="container">
         <div class="row">
 
@@ -88,7 +88,7 @@
 </section>
 
 
-<section class="artists-section section-padding" id="section_3">
+<section class="artists-section section-padding" id="">
     <div class="container">
         <div class="row justify-content-center">
 
@@ -193,7 +193,7 @@
 </section>
 
 
-<section class="schedule-section section-padding" id="section_4">
+<section class="schedule-section section-padding" id="">
     <div class="container">
         <div class="row">
 

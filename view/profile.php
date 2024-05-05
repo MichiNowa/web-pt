@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
-   <link rel="stylesheet" href="style.css">
-</head>
-<body>
+
 <?php require 'header.php'; ?>
-<div class="profile">
+<div class="profile" id="section_3">
         <div class="details">
             <div class="picture">
                 <img src="th.jpg" alt="Profile Picture">
@@ -249,5 +241,3 @@
  <script src="main.js"></script>
 
 <?php require 'footer.php'; ?>
-</body>
-</html>
