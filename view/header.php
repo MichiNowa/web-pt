@@ -38,7 +38,7 @@
     <script src="../js/click-scroll.js"></script>
     <script src="../js/custom.js"></script>
 
-    <main>
+   <main class="bg-black">
         <header class="site-header">
             <div class="container">
                 <div class="row">
@@ -53,7 +53,8 @@
                 </div>
             </div>
         </header>
-        <nav class="navbar navbar-expand-lg">
+   </main>
+        <nav class="navbar navbar-expand-lg bg-black">
             <div class="container">
                 <a class="navbar-brand" href="index.php">
                     Code Sphere
@@ -87,14 +88,13 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="notification.php">Notifications</a>
+                            <a class="nav-link click-scroll" href="notifrication.php">Notifications</a>
                         </li>
                         <li>
                             <a href="login.php" class="btn custom-btn d-lg-block d-none">Account</a>
                         </li>
                     </ul>
-
-
                 </div>
             </div>
         </nav>
+       
