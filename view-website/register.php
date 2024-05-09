@@ -1,4 +1,12 @@
-<?php require 'header.php'; ?>
+<?php
+
+include '../server/session-file.php';
+include '../handlers/register-handler.php';
+include '../handlers/login-handler.php';
+
+require 'header.php';
+
+?>
 
 <nav class="navbar navbar-expand-lg">
     <div class="container">
@@ -16,18 +24,25 @@
         <div class="row">
 
             <div class="col-lg-6 col-10 mx-auto">
-                <form class="custom-form ticket-form mb-5 mb-lg-0" action="#" method="post" role="form">
+                <form class="custom-form ticket-form mb-5 mb-lg-0" action="register.php" method="POST" role="form">
                     <h2 class="text-center mb-4">Register here</h2>
 
                     <input type="text" name="ticket-form-name" id="ticket-form-name" class="form-control"
-                        placeholder="Username" required>
+                        placeholder="Username" value="<?php if (isset($_SESSION['username'])) {
+                            echo $_SESSION['username'];
+                        } ?>" required>
+
 
                     <input type="email" name="ticket-form-email" id="ticket-form-email" pattern="[^ @]*@[^ @]*"
-                        class="form-control" placeholder="Email address" required>
+                        class="form-control" placeholder="Email address" value="<?php if (isset($_SESSION['reg_email'])) {
+                            echo $_SESSION['reg_email'];
+                        } ?>" required>
 
-                    <div class="text-end mb-2"><input type="checkbox" name="" id=""><small> Show Password</small>
+                    <div class="text-end mb-2">
+                        <input type="checkbox" name="pswd_show" id="pswd_show" onclick="pswd_toggle()"><small> Show
+                            Password</small>
                         <input type="password" class="form-control" name="ticket-form-phone" placeholder="Password"
-                            required>
+                            id="pswd" required>
                     </div>
 
                     <div class="col-lg-4 col-md-10 col-8 mx-auto">
@@ -47,5 +62,17 @@
     </div>
 </section>
 </main>
+
+<script>
+    function pswd_toggle() {
+        var x = document.getElementById("pswd");
+        var box = document.getElementById("pswd_show");
+        if (box.checked == 1) {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+</script>
 
 <?php require 'footer.php'; ?>

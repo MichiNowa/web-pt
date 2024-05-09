@@ -1,6 +1,5 @@
 <?php
 
-
 $username = "";
 $email = "";
 $password = "";
@@ -25,7 +24,7 @@ if (isset($_POST['reg_user'])) {
     $_SESSION['reg_password'] = $password;
 
 
-
+    // check uniqyueness of email and username
     if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $email = filter_var($email, FILTER_VALIDATE_EMAIL);
 
@@ -55,23 +54,6 @@ if (isset($_POST['reg_user'])) {
         array_push($error_array, "You username can only contain english characters or numbers");
     }
 
-    if (strlen($fname) > 25 || strlen($fname) < 2) {
-        array_push($error_array, "Your first name must be between 2 and 25 characters");
-    }
-
-    if (strlen($lname) > 25 || strlen($lname) < 2) {
-        array_push($error_array, "Your last name must be between 2 and 25 characters");
-    }
-
-    if ($password != $password2) {
-        array_push($error_array, "Your passwords doesn't match");
-    }
-    // else{ 
-    //     if(preg_match('/[^A-Za-z0-9]/', $password)){
-    //         array_push($error_array, "Your password can only contain english characters or numbers");
-    //     }
-    // }
-
     if (strlen(strlen($password) < 4)) {
         array_push($error_array, "Your password must be between 5 and 30 characters or numbers");
     }
@@ -83,13 +65,13 @@ if (isset($_POST['reg_user'])) {
         // $password = $password;
 
         // set a default profpic and banner color
-        $imageid = "assets/images/profile_pics/defaults/male.png";
+        $imageid = "../images/svd/dp.jpg";
         $colors = "black";
 
-        $query = "INSERT INTO users (username, email, password, imageid, bio, skills, hobbies, colors) VALUES ( '$username', '$email', '$password', '$imageid', 'This person is too lazy to add a bio', 'This person is hiding their skills', 'This person is hiding their hobbies', '$cover_pic', '$colors')";
+        $query = "INSERT INTO users (username, email, pswd, imageid, bio, skills, hobbies, colors) VALUES ( '$username', '$email', '$password', '$imageid', 'This person is too lazy to add a bio', 'This person is hiding their skills', 'This person is hiding their hobbies', '$colors')";
         if (mysqli_query($con, $query)) {
             $_SESSION['username'] = $username;
-            header('location: index.php');
+            header('location: ../view/home.php');
             // echo "success :)";
         } else {
             echo "fail" . mysqli_connect_errno();
