@@ -1,10 +1,9 @@
 <?php
 
-include '../server/session-file.php';
 include '../handlers/register-handler.php';
 include '../handlers/login-handler.php';
 
-require 'header.php';
+require 'header1.php';
 
 ?>
 
@@ -27,7 +26,7 @@ require 'header.php';
                 <form class="custom-form ticket-form mb-5 mb-lg-0" action="register.php" method="POST" role="form">
                     <h2 class="text-center mb-4">Register here</h2>
 
-                    <input type="text" name="ticket-form-name" id="ticket-form-name" class="form-control"
+                    <input type="text" name="username" id="username" class="form-control"
                         placeholder="Username" value="<?php if (isset($_SESSION['username'])) {
                             echo $_SESSION['username'];
                         } ?>" required>
@@ -46,7 +45,7 @@ require 'header.php';
                     </div>
 
                     <div class="col-lg-4 col-md-10 col-8 mx-auto">
-                        <button type="submit" class="form-control">Register</button>
+                        <button type="submit" name="submit" class="form-control">Register</button>
                     </div>
 
                     <br>
@@ -75,4 +74,4 @@ require 'header.php';
     }
 </script>
 
-<?php require 'footer.php'; ?>
+<?php require 'footer1.php'; ?>

@@ -1,10 +1,8 @@
 <?php
-
-include '../server/session-file.php';
 include '../handlers/register-handler.php';
 include '../handlers/login-handler.php';
 
-require 'header.php';
+require 'header1.php';
 
 ?>
 
@@ -25,11 +23,12 @@ require 'header.php';
         <div class="row">
 
             <div class="col-lg-6 col-10 mx-auto">
-                <form class="custom-form ticket-form mb-5 mb-lg-0" action="#" method="POST" role="form">
+                <form class="custom-form ticket-form mb-5 mb-lg-0" action="../handlers/login-handler.php" method="POST" role="form">
                     <h2 class="text-center mb-4">Sign In here</h2>
 
+                    <!-- login form -->
                     <div class="text-end mb-2">
-                        <input type="email" name="ticket-form-email" id="ticket-form-email" pattern="[^ @]*@[^ @]*"
+                        <input type="email" name="log_email" id="log_email" pattern="[^ @]*@[^ @]*"
                             class="form-control" placeholder="Email address" required value="<?php if (isset($SESSION['log_email'])) {
                                 echo $_SESSION['log_email'];
                             } ?>">
@@ -38,7 +37,7 @@ require 'header.php';
                     <div class="text-end mb-2">
                         <input type="checkbox" name="pswd_show" id="pswd_show" onclick="pswd_toggle()"><small> Show Password</small>
                         <input type="password" class="form-control" name="login_pswd" id="login_pswd" placeholder="Password"
-                            required>
+                            required >
                     </div>
 
                     <!-- check user liogn -->
@@ -46,7 +45,7 @@ require 'header.php';
                         echo "<p class='alert'>Email or Password was incorrect</p>"; ?> -->
 
                     <div class="col-lg-4 col-md-10 col-8 mx-auto">
-                        <button type="submit" class="form-control">Sign In</button>
+                        <button type="submit" name="submit" class="form-control">Sign In</button>
                     </div>
 
                     <br>
@@ -74,4 +73,4 @@ require 'header.php';
         }
     </script>
 
-<?php require 'footer.php'; ?>
+<?php require 'footer1.php'; ?>

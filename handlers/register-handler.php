@@ -1,11 +1,13 @@
 <?php
 
+require_once 'session-file.php';
+
 $username = "";
 $email = "";
 $password = "";
 $error_array = array();
 
-if (isset($_POST['reg_user'])) {
+if (isset($_POST['submit'])) {
 
     //Username
     $username = strip_tags($_POST['username']);
@@ -71,7 +73,7 @@ if (isset($_POST['reg_user'])) {
         $query = "INSERT INTO users (username, email, pswd, imageid, bio, skills, hobbies, colors) VALUES ( '$username', '$email', '$password', '$imageid', 'This person is too lazy to add a bio', 'This person is hiding their skills', 'This person is hiding their hobbies', '$colors')";
         if (mysqli_query($con, $query)) {
             $_SESSION['username'] = $username;
-            header('location: ../view/home.php');
+            header('location: home.php');
             // echo "success :)";
         } else {
             echo "fail" . mysqli_connect_errno();

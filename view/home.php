@@ -1,4 +1,9 @@
-<?php require ('header.php'); ?>
+<?php 
+
+require ('header.php'); 
+include '../handlers/session-file.php';
+
+?>
 
 
 <section class="hero-section" id="section_1">
