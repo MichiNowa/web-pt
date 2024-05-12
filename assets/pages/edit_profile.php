@@ -29,12 +29,12 @@
                 <div class="form-floating mt-1 col-6 ">
                     <input type="text" name="first_name" value="<?= $user['first_name'] ?>" class="form-control rounded-0"
                         placeholder="username/email">
-                    <label for="floatingInput">first name</label>
+                    <label for="floatingInput">First Name</label>
                 </div>
                 <div class="form-floating mt-1 col-6">
                     <input type="text" name="last_name" value="<?= $user['last_name'] ?>" class="form-control rounded-0"
                         placeholder="username/email">
-                    <label for="floatingInput">last name</label>
+                    <label for="floatingInput">Last Name</label>
                 </div>
 
 
@@ -68,19 +68,23 @@
             <div class="form-floating mt-1">
                 <input type="email" value="<?= $user['email'] ?>" class="form-control rounded-0" placeholder="email"
                     disabled>
-                <label for="floatingInput">email</label>
+                <label for="floatingInput">Email</label>
             </div>
             <div class="form-floating mt-1">
                 <input type="text" value="<?= $user['username'] ?>" name="username" class="form-control rounded-0"
                     placeholder="username/email">
-                <label for="floatingInput">username</label>
+                <label for="floatingInput">Username</label>
             </div>
             <?= showError('username') ?>
-
+        
+            <div class="text-end mt-2">
+                <input type="checkbox" name="pswd_show" id="pswd_show" onclick="pswd_toggle()"><small> Show
+                    Password</small>
+            </div>
             <div class="form-floating mt-1">
                 <input type="password" name="password" class="form-control rounded-0" id="floatingPassword"
                     placeholder="Password">
-                <label for="floatingPassword">new password</label>
+                <label for="floatingPassword">New Password</label>
             </div>
 
             <div class="mt-3 d-flex justify-content-between align-items-center">
@@ -94,3 +98,16 @@
     </div>
 
 </div>
+
+<!-- see password -->
+<script>
+    function pswd_toggle() {
+        var x = document.getElementById("floatingPassword");
+        var box = document.getElementById("pswd_show");
+        if (box.checked == 1) {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+</script>
