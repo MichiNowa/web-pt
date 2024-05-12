@@ -3,17 +3,17 @@ global $profile;
 global $profile_post;
 global $user;
 ?>
-    <div class="container col-md-9 col-sm-11 rounded-0">
-        <div class="col-12 rounded p-4 mt-4 d-md-flex gap-5">
+    <div class="container col-md-9 col-sm-12 rounded-0" style="background-color: black;">
+        <div class="col-25 rounded p-4 mt-4 d-md-flex gap-5">
             <div class="col-md-4 col-sm-12 d-flex justify-content-center mx-auto align-items-start"><div class="px-md-5"></div><img src="assets/images/profile/<?=$profile['profile_pic']?>"
                     class="img-thumbnail rounded-circle mb-3" style="width:170px;height:170px" alt="...">
             </div>
-            <div class="col-md-8 col-sm-11">
+            <div class="col-md-7 col-sm-12 rounded-start">
                 <div class="d-flex flex-column">
                     <div class="d-flex gap-5 align-items-center">
-                        <span style="font-size: xx-large;"><?=$profile['first_name']?> <?=$profile['last_name']?></span>
+                        <span style="font-size: xx-large; color:orange;"><?=$profile['first_name']?> <?=$profile['last_name']?></span>
                         
-                        <?php
+                        <?php 
 if($user['id']!=$profile['id'] && !checkBS($profile['id'])){
     ?>
   <div class="dropdown">
@@ -37,7 +37,7 @@ if(!checkBS($profile['id'])){
     ?>
  <div class="d-flex gap-2 align-items-center my-3">
 
-<a class="btn btn-sm btn-primary"><i class="bi bi-file-post-fill"></i> <?=count($profile_post)?> Posts</a>
+<a class="btn btn-sm"  style="background-color: red;color:orange;"><i class="bi bi-file-post-fill"></i> <?=count($profile_post)?> Posts</a>
 <a class="btn btn-sm btn-primary <?=count($profile['followers'])<1?'disabled':''?>" data-bs-toggle="modal" data-bs-target="#follower_list"><i class="bi bi-people-fill"></i> <?=count($profile['followers'])?> Followers</a>
 <a class="btn btn-sm btn-primary <?=count($profile['following'])<1?'disabled':''?>" data-bs-toggle="modal" data-bs-target="#following_list"><i class="bi bi-person-fill"></i> <?=count($profile['following'])?> Following</a>
 
@@ -89,7 +89,7 @@ if(checkBlockStatus($user['id'],$profile['id'])){
 
 
         </div>
-        <h3 class="border-bottom">Posts</h3>
+        <h3 class="border-bottom text-light">Posts</h3>
         <?php
 
 if(checkBS($profile['id'])){
@@ -105,7 +105,7 @@ if(checkBS($profile['id'])){
     echo "<p class='p-2 bg-white border rounded text-center my-3'>You don't have any post</p>";
 }
         ?>
-        <div class="gallery d-flex flex-wrap gap-2 mb-4">
+        <div class="gallery d-flex flex-wrap gap-2 mb-5" style="background-color: #264653;">
             <?php
                
 foreach($profile_post as $post){

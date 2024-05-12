@@ -1,12 +1,13 @@
 <?php global $user; ?>
 <div class="container col-md-9 col-sm-12 rounded-0 d-flex justify-content-between">
-    <div class="col-12 bg-white border rounded p-4 mt-4 shadow-sm">
+    <div class="col-12  border rounded p-4 mt-4 shadow-sm" style="background-color:black
+;">
         <form method="post" action="assets/php/actions.php?updateprofile" enctype="multipart/form-data">
             <div class="d-flex justify-content-center">
 
 
             </div>
-            <h1 class="h5 mb-3 fw-normal">Edit Profile</h1>
+            <h1 class="h5 mb-3 fw-normal" style="color:orange;"><b>Edit Profile</b></h1>
             <?php
             if (isset($_GET['success'])) {
                 ?>
@@ -19,8 +20,9 @@
                 <img src="assets/images/profile/<?= $user['profile_pic'] ?>" class="img-thumbnail my-3"
                     style="height:150px;width:150px" alt="...">
                 <div class="mb-3">
-                    <label for="formFile" class="form-label">Change Profile Picture</label>
-                    <input class="form-control" type="file" name="profile_pic" id="formFile">
+                    <label for="formFile" class="form-label"style="color:orange;"><b>Change Profile Picture</b></label>
+                    <input class="form-control type="file" name="profile_pic" id="formFile" style="background-color:#edeef0
+;">
                 </div>
             </div>
             <?= showError('profile_pic') ?>
@@ -28,12 +30,14 @@
             <div class="d-flex">
                 <div class="form-floating mt-1 col-6 ">
                     <input type="text" name="first_name" value="<?= $user['first_name'] ?>" class="form-control rounded-0"
-                        placeholder="username/email">
+                        placeholder="username/email" style="background-color:#edeef0
+;">
                     <label for="floatingInput">First Name</label>
                 </div>
                 <div class="form-floating mt-1 col-6">
                     <input type="text" name="last_name" value="<?= $user['last_name'] ?>" class="form-control rounded-0"
-                        placeholder="username/email">
+                        placeholder="username/email" style="background-color:#edeef0
+;">
                     <label for="floatingInput">Last Name</label>
                 </div>
 
@@ -44,23 +48,26 @@
             <?= showError('last_name') ?>
             <div class="form-floating mt-1">
                 <input type="email" value="<?= $user['email'] ?>" class="form-control rounded-0" placeholder="email"
-                    disabled>
+                    disabled style="background-color:#edeef0
+;">
                 <label for="floatingInput">Email</label>
             </div>
             <div class="form-floating mt-1">
                 <input type="text" value="<?= $user['username'] ?>" name="username" class="form-control rounded-0"
-                    placeholder="username/email">
+                    placeholder="username/email" style="background-color:#edeef0
+;">
                 <label for="floatingInput">Username</label>
             </div>
             <?= showError('username') ?>
         
             <div class="text-end mt-2">
-                <input type="checkbox" name="pswd_show" id="pswd_show" onclick="pswd_toggle()"><small> Show
-                    Password</small>
+                <input type="checkbox"  name="pswd_show" id="pswd_show" onclick="pswd_toggle()"><small style="color:orange;"><b>Show
+                    Password</b> </small>
             </div>
             <div class="form-floating mt-1">
                 <input type="password" name="password" class="form-control rounded-0" id="floatingPassword"
-                    placeholder="Password">
+                    placeholder="Password" style="background-color:#edeef0
+;">
                 <label for="floatingPassword">New Password</label>
             </div>
 

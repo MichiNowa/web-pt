@@ -4,7 +4,7 @@
  global $follow_suggestions;
  
  ?>
-    <div class="container col-md-10 col-sm-12 col-lg-9 rounded-0 d-flex justify-content-between">
+    <div class="container col-md-10 col-sm-12 col-lg-9 rounded-0 d-flex justify-content-center">
         <div class="col-md-8 col-sm-12">
 
         <!-- newsfeed -->
@@ -18,11 +18,14 @@
                 $likes = getLikes($post['id']);
                 $comments = getComments($post['id']);
         ?>
-    <div class="card mt-4">
+
+               
+                <div class="card mt-4" style="background-color: black
+; border-radius:20px;padding:10px;color:white;border:5px solid black;">
                <div class="card-title d-flex justify-content-between  align-items-center">
 
-                   <div class="d-flex align-items-center p-2">
-                       <img src="assets/images/profile/<?=$post['profile_pic']?>" alt="" height="30" width="30" class="rounded-circle border">&nbsp;&nbsp;<a href='?u=<?=$post['username']?>' class="text-decoration-none text-dark"><?=$post['first_name']?> <?=$post['last_name']?></a>
+                   <div class="d-flex align-items-center p-2" style="color: orange;">
+                       <img src="assets/images/profile/<?=$post['profile_pic']?>" alt="" height="30" width="30" class="rounded-circle border">&nbsp;&nbsp;<a href='?u=<?=$post['username']?>' class="text-decoration-none text-light"><?=$post['first_name']?> <?=$post['last_name']?></a>
                    </div>
                    <div class="p-2">
                        <?php
@@ -82,13 +85,14 @@
             <!-- comments -->
                 <div class="input-group p-2 <?=$post['post_text']?'border-top':''?>">
                  
-                        <input type="text" class="form-control rounded-0 border-0 comment-input" placeholder="comment on this post"
+                        <input type="text" class="form-control rounded-4 border-0 comment-input text-light"  style="background-color: #264653; border-radius: 100px;" placeholder="Comment on this post "
                                 aria-label="Recipient's username" aria-describedby="button-addon2">
                             <button class="btn btn-outline-primary rounded-0 border-0 add-comment" data-page='wall' data-cs="comment-section<?=$post['id']?>" data-post-id="<?=$post['id']?>" type="button"
                                 id="button-addon2">Post</button>
                 </div>
 
             </div>
+
             <div class="modal fade" id="postview<?=$post['id']?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-centered">
             <div class="modal-content">
@@ -110,7 +114,7 @@
                                 <p style="margin:0px;" class="text-muted">@<?=$post['username']?></p>
                             </div>
                             <div class="d-flex flex-column align-items-end flex-fill">
-                <div class="" ></div>
+                <div class="" ></div> 
                 <div class="dropdown">
   <span class="<?=count($likes)<1?'disabled':''?>" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
   <?=count($likes)?> likes
