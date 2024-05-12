@@ -10,12 +10,12 @@
                 <div class="form-floating mt-1 col-6 ">
                     <input type="text" name="first_name" value="<?= showFormData('first_name') ?>"
                         class="form-control rounded-0" placeholder="username/email">
-                    <label for="floatingInput">first name</label>
+                    <label for="floatingInput">First Name</label>
                 </div>
                 <div class="form-floating mt-1 col-6">
                     <input type="text" name="last_name" value="<?= showFormData('last_name') ?>"
                         class="form-control rounded-0" placeholder="username/email">
-                    <label for="floatingInput">last name</label>
+                    <label for="floatingInput">Last Name</label>
                 </div>
             </div>
             <?= showError('first_name') ?>
@@ -47,21 +47,25 @@
             <div class="form-floating mt-1">
                 <input type="email" name="email" value="<?= showFormData('email') ?>" class="form-control rounded-0"
                     placeholder="username/email">
-                <label for="floatingInput">email</label>
+                <label for="floatingInput">Email Address</label>
             </div>
             <?= showError('email') ?>
 
             <div class="form-floating mt-1">
-                <input type="text" name="username" value="<?= showFormData('username') ?>" class="form-control rounded-0"
-                    placeholder="username/email">
-                <label for="floatingInput">username</label>
+                <input type="text" name="username" value="<?= showFormData('username') ?>"
+                    class="form-control rounded-0" placeholder="username/email">
+                <label for="floatingInput">Username</label>
             </div>
             <?= showError('username') ?>
 
+            <div class="text-end mt-2">
+                <input type="checkbox" name="pswd_show" id="pswd_show" onclick="pswd_toggle()"><small> Show
+                    Password</small>
+            </div>
             <div class="form-floating mt-1">
                 <input type="password" name="password" class="form-control rounded-0" id="floatingPassword"
                     placeholder="Password">
-                <label for="floatingPassword">password</label>
+                <label for="floatingPassword">Password</label>
             </div>
             <?= showError('password') ?>
 
@@ -76,3 +80,16 @@
         </form>
     </div>
 </div>
+
+<script>
+    // see passweord
+    function pswd_toggle() {
+        var x = document.getElementById("floatingPassword");
+        var box = document.getElementById("pswd_show");
+        if (box.checked == 1) {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+</script>
