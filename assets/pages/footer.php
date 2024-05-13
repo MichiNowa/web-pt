@@ -146,7 +146,7 @@
 
 <footer style="background-color: white;">
 <hr>
-  <div class="mt-5 text-center">
+  <div class="mt-2 text-center">
     <img src="../images/logo.png" alt="" width="150px">
       <p class="copyright-text">
         <small class="col-12 mt-auto mb-5 text-muted">Copyright © 2024 MAL Company - Michi Arvin Lhil Company</small>
