@@ -1,14 +1,14 @@
 <?php global $user;?>
-    <nav class="navbar navbar-expand-lg navbar-light border" style="background-color: black;">
+    <nav class="navbar navbar-expand-lg navbar-light ">
         <div class="container col-lg-9 col-sm-12 col-md-10 d-flex flex-lg-row flex-md-row flex-sm-column justify-content-between">
-            <div class="d-flex justify-content-between col-lg-8 col-sm-12" style="background-color: black;">
+            <div class="d-flex justify-content-between col-lg-8 col-sm-12 bg-light">
                 <a class="navbar-brand" href="?">
                     <img src="assets/images/logo.png" alt="" height="28">
 
                 </a>
 
                 <form class="d-flex" id="searchform">
-                    <input class="form-control me-0" type="search" id="search" placeholder="Search for other users"
+                   <input class="form-control me-0" type="search" id="search" placeholder="Search for other users"
                         aria-label="Search" autocomplete="off" style="background-color: #F8E5E5;">
 <div class="bg-white text-end rounded border shadow py-3 px-4 mt-5" style="display:none;position:absolute;z-index:+99;" id="search_result" data-bs-auto-close="true">
 <button type="button" class="btn-close" aria-label="Close" id="close_search"></button>
@@ -22,7 +22,7 @@
             </div>
 
 
-            <ul class="navbar-nav flex-fill flex-row justify-content-evenly mb-lg-1 mb-sm-0" style="background-color: black;">
+            <ul class="navbar-nav flex-fill flex-row justify-content-evenly mb-lg-1 mb-sm-0 bg-dark">
 
                 <li class="nav-item">
                     <a class="nav-link text-light" href="?"><i class="bi bi-house-door-fill" title="Home"></i></a>
