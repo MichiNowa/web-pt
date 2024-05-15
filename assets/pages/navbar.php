@@ -1,4 +1,21 @@
-<?php global $user;?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .hey{
+            color:white;
+        }
+        .hey:hover{
+            background-color: black;
+            color: white
+        }
+    </style>
+    <?php global $user;?>
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: black;">
         <div class="container col-lg-9 col-sm-12 col-md-10 d-flex flex-lg-row flex-md-row flex-sm-column justify-content-between">
             <div class="d-flex justify-content-between col-lg-8 col-sm-12 " style="background-color: black;">
@@ -65,13 +82,13 @@ if(getUnreadNotificationsCount()>0){
                         <img src="assets/images/profile/<?=$user['profile_pic']?>" alt="" height="30" width="30" class="rounded-circle border">
                     </a>
                     <ul class="dropdown-menu position-absolute top-100 end-50 bg-dark" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item bg-dark text-light" href="?u=<?=$user['username']?>"><i class="bi bi-person"></i> My Profile</a></li>
+                    <li><a class=" hey dropdown-item " href="?u=<?=$user['username']?>"><i class="bi bi-person"></i> My Profile</a></li>
 
-                        <li><a class="dropdown-item bg-dark text-light" href="?editprofile"><i class="bi bi-pencil-square"></i> Edit Profile</a></li>
+                        <li><a class=" hey dropdown-item" href="?editprofile"><i class="bi bi-pencil-square"></i> Edit Profile</a></li>
                         <li>
-                            <hr class="dropdown-divider">
+                            <hr class=" hey dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item  bg-dark text-danger" href="assets/php/actions.php?logout"><i class="bi bi-box-arrow-in-left"></i> Logout</a></li>
+                        <li><a class="hey dropdown-item text-danger" href="assets/php/actions.php?logout"><i class="bi bi-box-arrow-in-left"></i> Logout</a></li>
                     </ul>
                 </li>
 
@@ -80,3 +97,5 @@ if(getUnreadNotificationsCount()>0){
 
         </div>
     </nav>
+</body>
+</html>

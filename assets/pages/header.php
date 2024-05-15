@@ -10,7 +10,6 @@
     <link href="assets/css/custom.css" rel="stylesheet">
     <link rel="icon" href="assets/images/favicon.png">
 
-
     <title><?= $data['page_title'] ?></title>
 </head>
 

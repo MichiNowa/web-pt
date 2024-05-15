@@ -6,6 +6,11 @@
     <title>Document</title>
 </head>
 <body style="background-color: #1f1f1f;">
+<style>
+    .msg:hover{
+background-color: black;
+    }
+</style>
 <?php
 global $profile;
 global $profile_post;
@@ -28,8 +33,8 @@ if($user['id']!=$profile['id'] && !checkBS($profile['id'])){
                             <span class="" style="font-size:xx-large" type="button" id="dropdownMenuButton1"
                                 data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-three-dots"></i> </span>
                             <ul class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuButton1">
-                                <li><a class="dropdown-item bg-dark"style="color: #ff5500;" href="#" data-bs-toggle="modal" data-bs-target="#chatbox" onclick="popchat(<?=$profile['id']?>)"><i class="bi bi-chat-fill" style="color: #ff5500;"></i> Message</a></li>
-                                <li><a class="dropdown-item "style="color: #ff5500;" href="assets/php/actions.php?block=<?=$profile['id']?>&username=<?=$profile['username']?>"><i class="bi bi-x-circle-fill"style="color: #ff5500;" ></i> Block</a></li>
+                                <li><a class=" dropdown-item msg"style="color: #ff5500;" href="#" data-bs-toggle="modal" data-bs-target="#chatbox" onclick="popchat(<?=$profile['id']?>)"><i class=" bi bi-chat-fill" style="color: #ff5500;"></i> Message</a></li>
+                                <li><a class="dropdown-item msg "style="color: #ff5500;" href="assets/php/actions.php?block=<?=$profile['id']?>&username=<?=$profile['username']?>"><i class="bi bi-x-circle-fill"style="color: #ff5500;" ></i> Block</a></li>
                             </ul>
                         </div>
     <?php
@@ -133,16 +138,15 @@ foreach($profile_post as $post){
 
 
 
-                    <div class="col-md-4 col-sm-12 d-flex flex-column">
-                        <div class="d-flex align-items-center p-2 <?=$post['post_text']?'':'border-bottom'?>">
+                    <div class="col-md-4 col-sm-12 d-flex flex-column" >
+                        <div style="background-color: #ff5500;" class="d-flex align-items-center p-2 text-light" <?=$post['post_text']?'':' '?>">
                             <div><img src="assets/images/profile/<?=$profile['profile_pic']?>" alt="" height="50" width="50" class="rounded-circle border">
                             </div>
                             <div>&nbsp;&nbsp;&nbsp;</div>
                             <div class="d-flex flex-column justify-content-start">
                                 <h6 style="margin: 0px;"><?=$profile['first_name']?> <?=$profile['last_name']?></h6>
-                                <p style="margin:0px;" class="text-muted">@<?=$profile['username']?></p>
+                                <p style="margin:0px;" class="text-light">@<?=$profile['username']?></p>
                             </div>
-
                             <div class="d-flex flex-column align-items-end flex-fill">
                 <div class="" ></div>
                 <div class="dropdown">
@@ -166,10 +170,10 @@ foreach($profile_post as $post){
                  
 </div>
                         </div>
-<div class="border-bottom p-2 <?=$post['post_text']?'':'d-none'?>"><?=$post['post_text']?> </div>
+<div class=" p-2 text-light <?=$post['post_text']?'':'d-none'?>"><?=$post['post_text']?> </div>
 
 
-                        <div class="flex-fill align-self-stretch overflow-auto" id="comment-section<?=$post['id']?>" style="height: 100px;">
+                        <div class="flex-fill align-self-stretch overflow-auto bg-dark text-light" id="comment-section<?=$post['id']?>" style="height: 100px;">
 
                           <?php
 $comments = getComments($post['id']);
@@ -186,8 +190,8 @@ foreach($comments as $comment){
                                 </div>
                                 <div>&nbsp;&nbsp;&nbsp;</div>
                                 <div class="d-flex flex-column justify-content-start align-items-start">
-                                    <h6 style="margin: 0px;"><a href="?u=<?=$cuser['username']?>" class="text-decoration-none text-muted">@<?=$cuser['username']?></a> - <?=$comment['comment']?></h6>
-                                    <p style="margin:0px;" class="text-muted"><?=show_time($comment['created_at'])?></p>
+                                    <h6 style="margin: 0px;"><a href="?u=<?=$cuser['username']?>" class="text-decoration-none text-light`">@<?=$cuser['username']?></a> - <?=$comment['comment']?></h6>
+                                    <p style="margin:0px;" class="text-light"><?=show_time($comment['created_at'])?></p>
                                 </div>
                             </div>
 
@@ -204,10 +208,10 @@ foreach($comments as $comment){
                         <?php
                         if(checkFollowStatus($profile['id']) || $profile['id']==$user['id']){
                             ?>
-  <div class="input-group p-2 border-top">
-                            <input type="text" class="form-control rounded-0 border-0 comment-input" placeholder="say something.."
+  <div class="input-group p-2 border-top bg-dark text-light">
+                            <input type="text" class="form-control rounded-0 border-0 comment-input bg-dark text-light" placeholder="say something.."
                                 aria-label="Recipient's username" aria-describedby="button-addon2">
-                            <button class="btn btn-outline-primary rounded-0 border-0 add-comment" data-cs="comment-section<?=$post['id']?>" data-post-id="<?=$post['id']?>" type="button"
+                            <button class="btn btn-outline  add-comment text-light" style="background-color: #ff5500; border-radius:15px;" data-cs="comment-section<?=$post['id']?>" data-post-id="<?=$post['id']?>" type="button"
                                 id="button-addon2">Post</button>
                         </div>
                             <?php
@@ -272,7 +276,7 @@ foreach($profile['followers'] as $f){
 <div class="d-flex justify-content-between">
                     <div class="d-flex align-items-center p-2">
                         <div><img src="assets/images/profile/<?=$fuser['profile_pic']?>" alt="" height="40" width="40" class="rounded-circle border">
-                        </div>
+                        </div> text-light
                         <div>&nbsp;&nbsp;</div>
                         <div class="d-flex flex-column justify-content-center">
                             <a href='?u=<?=$fuser['username']?>' class="text-decoration-none text-light"><h6 style="margin: 0px;font-size: small;"><?=$fuser['first_name']?> <?=$fuser['last_name']?></h6></a>
