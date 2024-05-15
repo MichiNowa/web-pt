@@ -8,16 +8,16 @@
                 </a>
 
                 <form class="d-flex" id="searchform">
-                   <input class="form-control me-0 " type="search" id="search" placeholder="Search for other users"
-                        aria-label="Search" autocomplete="off" style="background-color: #F8E5E5;">
-<div class="bg-dark text-light rounded  shadow py-3 px-4 mt-5" style="display:none;position:absolute;z-index:+99;" id="search_result" data-bs-auto-close="true">
-<button type="button" class="btn-close" aria-label="Close" id="close_search"></button>
-<div id="sra" class="text-start">
-<p class="text-center text-muted">enter name or username</p>
-
-</div>
-</div>
-                </form>
+        <input class="form-control me-0 bg-dark text-light border-0" type="search" id="search"
+          placeholder="Search for other users" aria-label="Search" autocomplete="off" style="background-color: #F8E5E5;">
+        <div class="bg-dark text-light rounded  shadow py-3 px-4 mt-5" style="display:none;position:absolute;z-index:+99;"
+          id="search_result" data-bs-auto-close="true">
+          <button type="button" class="btn-close" aria-label="Close" id="close_search"></button>
+          <div id="sra" class="text-start">
+            <p class="text-center text-muted">Search a name</p>
+          </div>
+        </div>
+      </form>
 
             </div>
 
@@ -60,18 +60,18 @@ if(getUnreadNotificationsCount()>0){
   </span></a>
                 </li>
                 <li class="nav-item dropdown dropstart">
-                    <a class="nav-link  text-light" href="#" id="navbarDropdown" role="button"
+                    <a class="nav-link bg-black text-light" href="#" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="assets/images/profile/<?=$user['profile_pic']?>" alt="" height="30" width="30" class="rounded-circle border">
                     </a>
                     <ul class="dropdown-menu position-absolute top-100 end-50 bg-dark" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item bg-black" style="color: orange;"" href="?u=<?=$user['username']?>"><i class="bi bi-person"></i> My Profile</a></li>
+                    <li><a class="dropdown-item bg-dark text-light" href="?u=<?=$user['username']?>"><i class="bi bi-person"></i> My Profile</a></li>
 
-                        <li><a class="dropdown-item bg-black" style="color: orange;" href="?editprofile"><i class="bi bi-pencil-square"></i> Edit Profile</a></li>
+                        <li><a class="dropdown-item bg-dark text-light" href="?editprofile"><i class="bi bi-pencil-square"></i> Edit Profile</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item  bg-black" style="color: orange;"" href="assets/php/actions.php?logout"><i class="bi bi-box-arrow-in-left"></i> Logout</a></li>
+                        <li><a class="dropdown-item  bg-dark text-danger" href="assets/php/actions.php?logout"><i class="bi bi-box-arrow-in-left"></i> Logout</a></li>
                     </ul>
                 </li>
 

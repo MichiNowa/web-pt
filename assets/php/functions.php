@@ -559,8 +559,6 @@ function searchUser($keyword)
 }
 
 
-
-
 //for getting userdata by username
 function getUserByUsername($username)
 {

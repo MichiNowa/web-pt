@@ -24,7 +24,7 @@ global $user;
                         <?php 
 if($user['id']!=$profile['id'] && !checkBS($profile['id'])){
     ?>
-   <div class="dropdown">
+   <div class="dropdown text-light">
                             <span class="" style="font-size:xx-large" type="button" id="dropdownMenuButton1"
                                 data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-three-dots"></i> </span>
                             <ul class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuButton1">
@@ -74,7 +74,7 @@ if(checkBlockStatus($user['id'],$profile['id'])){
 </div>
    <?php }else if(checkFollowStatus($profile['id'])){
    ?>
-<button style="background-color: #ff5500;" class="btn btn-sm btn text-light unfollowbtn" data-user-id='<?=$profile['id']?>' >Unfollow</button>
+<button class="btn btn-sm btn-danger unfollowbtn" data-user-id='<?=$profile['id']?>' >Unfollow</button>
    
    <?php
 }else{
@@ -113,7 +113,7 @@ if(checkBS($profile['id'])){
     echo "<p style='background-color:#ff5500;' class='p-2  rounded text-center text-light my-3'>You don't have any post</p>";
 }
         ?>
-        <div class="gallery d-flex flex-wrap gap-2 mb-5" style="background-color: #264653;">
+        <div class="gallery d-flex flex-wrap gap-2 mb-5" >
             <?php
                
 foreach($profile_post as $post){
