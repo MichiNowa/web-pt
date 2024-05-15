@@ -9,7 +9,8 @@
     <link href="assets/bootstrap/icons/bootstrap-icons.css" rel="stylesheet">
     <link href="assets/css/custom.css" rel="stylesheet">
     <link rel="icon" href="assets/images/favicon.png">
-    <link rel="stylesheet" href="design.css">
+
+
     <title><?= $data['page_title'] ?></title>
 </head>
 

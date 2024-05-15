@@ -25,13 +25,13 @@ if (isset($_GET['getmessages'])) {
             $seen = true;
         }
         $chatlist .= '  
-    <div class="d-flex justify-content-between border-bottom chatlist_item" data-bs-toggle="modal" data-bs-target="#chatbox" onclick="popchat(' . $chat['user_id'] . ')" >
+    <div class="d-flex justify-content-between border-bottom  chatlist_item" data-bs-toggle="modal" data-bs-target="#chatbox" onclick="popchat(' . $chat['user_id'] . ')" >
                         <div class="d-flex align-items-center p-2">
                             <div><img src="assets/images/profile/' . $ch_user['profile_pic'] . '" alt="" height="40" width="40" class="rounded-circle border">
                             </div>
                             <div>&nbsp;&nbsp;</div>
                             <div class="d-flex flex-column justify-content-center" >
-                                <a href="#" class="text-decoration-none text-dark"><h6 style="margin: 0px;font-size: small;">' . $ch_user['first_name'] . ' ' . $ch_user['last_name'] . '</h6></a>
+                                <a href="#" class="text-decoration-none text-light"><h6 style="margin: 0px;font-size: small;">' . $ch_user['first_name'] . ' ' . $ch_user['last_name'] . '</h6></a>
                                 <p style="margin:0px;font-size:small" class="">' . $chat['messages'][0]['msg'] . '</p>
                                 <time style="font-size:small" class="timeago text-small" datetime="' . $chat['messages'][0]['created_at'] . '">' . gettime($chat['messages'][0]['created_at']) . '</time>
                             </div>
@@ -48,11 +48,11 @@ if (isset($_GET['getmessages'])) {
                         </div>
                     </div>';
 
-    }
+    } 
     $json['chatlist'] = $chatlist;
 
 
-
+ 
     if (isset($_POST['chatter_id']) && $_POST['chatter_id'] != 0) {
         $messages = getMessages($_POST['chatter_id']);
         $chatmsg = "";
@@ -104,7 +104,6 @@ if (isset($_GET['unblock'])) {
 
 
 if (isset($_GET['notread'])) {
-
 
 
     if (setNotificationStatusAsRead()) {
@@ -218,7 +217,7 @@ if (isset($_GET['search'])) {
 
         foreach ($data as $fuser) {
             $fbtn = '';
-
+ 
 
             $users .= ' <div class="d-flex justify-content-between">
                             <div class="d-flex align-items-center p-2">
@@ -226,7 +225,7 @@ if (isset($_GET['search'])) {
                                 </div>
                                 <div>&nbsp;&nbsp;</div>
                                 <div class="d-flex flex-column justify-content-center">
-                                    <a href="?u=' . $fuser['username'] . '" class="text-decoration-none text-dark"><h6 style="margin: 0px;font-size: small;">' . $fuser['first_name'] . ' ' . $fuser['last_name'] . '</h6></a>
+                                    <a href="?u=' . $fuser['username'] . '" class="text-decoration-none text-light"><h6 style="margin: 0px;font-size: small;">' . $fuser['first_name'] . ' ' . $fuser['last_name'] . '</h6></a>
                                     <p style="margin:0px;font-size:small" class="text-muted">@' . $fuser['username'] . '</p>
                                 </div>
                             </div>

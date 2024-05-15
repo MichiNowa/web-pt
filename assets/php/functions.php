@@ -734,7 +734,7 @@ function validatePostImage($image_data)
         $response['field'] = 'post_img';
     }
 
-
+     
 
     if ($image_data['name']) {
         $image = basename($image_data['name']);

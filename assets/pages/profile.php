@@ -1,9 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #1f1f1f;">
 <?php
 global $profile;
 global $profile_post;
-global $user;
+global $user;  
 ?>
-    <div class="container col-md-9 col-sm-12 rounded-0" style="background-color: black;">
+    <div class="container col-md-9 col-sm-12 rounded-5" style="background-color: black;border-radius:25px; padding-bottom: 1px;">
         <div class="col-25 rounded p-4 mt-4 d-md-flex gap-5">
             <div class="col-md-4 col-sm-12 d-flex justify-content-center mx-auto align-items-start"><div class="px-md-5"></div><img src="assets/images/profile/<?=$profile['profile_pic']?>"
                     class="img-thumbnail rounded-circle mb-3" style="width:170px;height:170px" alt="...">
@@ -11,17 +19,17 @@ global $user;
             <div class="col-md-7 col-sm-12 rounded-start">
                 <div class="d-flex flex-column">
                     <div class="d-flex gap-5 align-items-center">
-                        <span style="font-size: xx-large; color:orange;"><?=$profile['first_name']?> <?=$profile['last_name']?></span>
+                        <span style="font-size: xx-large; color:#ff5500;"><?=$profile['first_name']?> <?=$profile['last_name']?></span>
                         
                         <?php 
 if($user['id']!=$profile['id'] && !checkBS($profile['id'])){
     ?>
-  <div class="dropdown">
+   <div class="dropdown">
                             <span class="" style="font-size:xx-large" type="button" id="dropdownMenuButton1"
                                 data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-three-dots"></i> </span>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#chatbox" onclick="popchat(<?=$profile['id']?>)"><i class="bi bi-chat-fill"></i> Message</a></li>
-                                <li><a class="dropdown-item " href="assets/php/actions.php?block=<?=$profile['id']?>&username=<?=$profile['username']?>"><i class="bi bi-x-circle-fill"></i> Block</a></li>
+                            <ul class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item bg-dark"style="color: #ff5500;" href="#" data-bs-toggle="modal" data-bs-target="#chatbox" onclick="popchat(<?=$profile['id']?>)"><i class="bi bi-chat-fill" style="color: #ff5500;"></i> Message</a></li>
+                                <li><a class="dropdown-item "style="color: #ff5500;" href="assets/php/actions.php?block=<?=$profile['id']?>&username=<?=$profile['username']?>"><i class="bi bi-x-circle-fill"style="color: #ff5500;" ></i> Block</a></li>
                             </ul>
                         </div>
     <?php
@@ -37,9 +45,9 @@ if(!checkBS($profile['id'])){
     ?>
  <div class="d-flex gap-2 align-items-center my-3">
 
-<a class="btn btn-sm"  style="background-color: red;color:orange;"><i class="bi bi-file-post-fill"></i> <?=count($profile_post)?> Posts</a>
-<a class="btn btn-sm btn-primary <?=count($profile['followers'])<1?'disabled':''?>" data-bs-toggle="modal" data-bs-target="#follower_list"><i class="bi bi-people-fill"></i> <?=count($profile['followers'])?> Followers</a>
-<a class="btn btn-sm btn-primary <?=count($profile['following'])<1?'disabled':''?>" data-bs-toggle="modal" data-bs-target="#following_list"><i class="bi bi-person-fill"></i> <?=count($profile['following'])?> Following</a>
+<a class="btn btn-sm"  style="background-color: #ff5500;color:white;"><i class="bi bi-file-post-fill"></i> <?=count($profile_post)?> Posts</a>
+<a style="background-color: #ff5500;" class="btn btn-sm btn text-light <?=count($profile['followers'])<1?'disabled':''?>" data-bs-toggle="modal" data-bs-target="#follower_list"><i class="bi bi-people-fill"></i> <?=count($profile['followers'])?> Followers</a>
+<a style="background-color: #ff5500;" class="btn btn-sm btn text-light  <?=count($profile['following'])<1?'disabled':''?>" data-bs-toggle="modal" data-bs-target="#following_list"><i class="bi bi-person-fill"></i> <?=count($profile['following'])?> Following</a>
 
 
 </div>
@@ -66,12 +74,12 @@ if(checkBlockStatus($user['id'],$profile['id'])){
 </div>
    <?php }else if(checkFollowStatus($profile['id'])){
    ?>
-<button class="btn btn-sm btn-danger unfollowbtn" data-user-id='<?=$profile['id']?>' >Unfollow</button>
+<button style="background-color: #ff5500;" class="btn btn-sm btn text-light unfollowbtn" data-user-id='<?=$profile['id']?>' >Unfollow</button>
    
    <?php
 }else{
     ?>
-<button class="btn btn-sm btn-primary followbtn" data-user-id='<?=$profile['id']?>' >Follow</button>
+<button style="background-color: #ff5500;" class="btn btn-sm btn followbtn text-light" data-user-id='<?=$profile['id']?>' >Follow</button>
 
     <?php
 }
@@ -89,7 +97,7 @@ if(checkBlockStatus($user['id'],$profile['id'])){
 
 
         </div>
-        <h3 class="border-bottom text-light">Posts</h3>
+        <h3 class="border-bottom " style="border-color:#ff5500;color:#ff5500;">Posts</h3>
         <?php
 
 if(checkBS($profile['id'])){
@@ -102,7 +110,7 @@ if(checkBS($profile['id'])){
    <?php
     
 }else if(count($profile_post)<1){
-    echo "<p class='p-2 bg-white border rounded text-center my-3'>You don't have any post</p>";
+    echo "<p style='background-color:#ff5500;' class='p-2  rounded text-center text-light my-3'>You don't have any post</p>";
 }
         ?>
         <div class="gallery d-flex flex-wrap gap-2 mb-5" style="background-color: #264653;">
@@ -236,28 +244,28 @@ if you want to comment follow this user</div>
   
     <!-- Modal -->
     
-    
+     
 
 
     <!-- this is for follower list -->
     <div class="modal fade" id="follower_list" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
   <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header text-light" style="background-color: #ff5500;">
                 <h5 class="modal-title">Followers</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body bg-dark text-light">
                 <?php
 foreach($profile['followers'] as $f){
     $fuser = getUser($f['follower_id']);
     $fbtn='';
     if(checkFollowStatus($f['follower_id'])){
-        $fbtn = '<button class="btn btn-sm btn-danger unfollowbtn" data-user-id='.$fuser['id'].' >Unfollow</button>';
+        $fbtn = '<button style="background-color:#ff5500; color:white;" class="btn btn-sm btn unfollowbtn" data-user-id='.$fuser['id'].' >Unfollow</button>';
     }else if($user['id']==$f['follower_id']){
         $fbtn='';
     }else{
-        $fbtn = '<button class="btn btn-sm btn-primary followbtn" data-user-id='.$fuser['id'].' >Follow</button>';
+        $fbtn = '<button style="background-color:#ff5500; color:white;" class="btn btn-sm btn followbtn" data-user-id='.$fuser['id'].' >Follow</button>';
 
     }
     ?>
@@ -267,8 +275,8 @@ foreach($profile['followers'] as $f){
                         </div>
                         <div>&nbsp;&nbsp;</div>
                         <div class="d-flex flex-column justify-content-center">
-                            <a href='?u=<?=$fuser['username']?>' class="text-decoration-none text-dark"><h6 style="margin: 0px;font-size: small;"><?=$fuser['first_name']?> <?=$fuser['last_name']?></h6></a>
-                            <p style="margin:0px;font-size:small" class="text-muted">@<?=$fuser['username']?></p>
+                            <a href='?u=<?=$fuser['username']?>' class="text-decoration-none text-light"><h6 style="margin: 0px;font-size: small;"><?=$fuser['first_name']?> <?=$fuser['last_name']?></h6></a>
+                            <p style="margin:0px;font-size:small;color:#ff5500;">@<?=$fuser['username']?></p>
                         </div>
                     </div>
                     <div class="d-flex align-items-center">
@@ -291,32 +299,32 @@ foreach($profile['followers'] as $f){
 <div class="modal fade" id="following_list" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
   <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header text-light" style="background-color: #ff5500;">
                 <h5 class="modal-title">Following</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body bg-dark">
                 <?php
 foreach($profile['following'] as $f){
     $fuser = getUser($f['user_id']);
     $fbtn='';
     if(checkFollowStatus($f['user_id'])){
-        $fbtn = '<button class="btn btn-sm btn-danger unfollowbtn" data-user-id='.$fuser['id'].' >Unfollow</button>';
+        $fbtn = '<button style="background-color: #ff5500;" class="btn btn-sm btn text-light unfollowbtn" data-user-id='.$fuser['id'].' >Unfollow</button>';
     }else if($user['id']==$f['user_id']){
         $fbtn='';
     }else{
-        $fbtn = '<button class="btn btn-sm btn-primary followbtn" data-user-id='.$fuser['id'].' >Follow</button>';
+        $fbtn = '<button style="background-color: #ff5500;" class="btn btn-sm btn text-light followbtn" data-user-id='.$fuser['id'].' >Follow</button>';
 
     }
     ?>
 <div class="d-flex justify-content-between">
                     <div class="d-flex align-items-center p-2">
-                        <div><img src="assets/images/profile/<?=$fuser['profile_pic']?>" alt="" height="40" width="40" class="rounded-circle border">
+                        <div><img src="assets/images/profile/<?=$fuser['profile_pic']?>" alt="" height="40" width="40" class="rounded-circle ">
                         </div>
                         <div>&nbsp;&nbsp;</div>
                         <div class="d-flex flex-column justify-content-center">
-                            <a href='?u=<?=$fuser['username']?>' class="text-decoration-none text-dark"><h6 style="margin: 0px;font-size: small;"><?=$fuser['first_name']?> <?=$fuser['last_name']?></h6></a>
-                            <p style="margin:0px;font-size:small" class="text-muted">@<?=$fuser['username']?></p>
+                            <a href='?u=<?=$fuser['username']?>' class="text-decoration-none text-light"><h6 style="margin: 0px;font-size: small;"><?=$fuser['first_name']?> <?=$fuser['last_name']?></h6></a>
+                            <p style="margin:0px;font-size:small;color:#ff5500;">@<?=$fuser['username']?></p>
                         </div>
                     </div>
                     <div class="d-flex align-items-center">
@@ -332,3 +340,5 @@ foreach($profile['following'] as $f){
         </div>
   </div>
 </div>
+</body>
+</html>
