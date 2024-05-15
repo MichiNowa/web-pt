@@ -32,7 +32,7 @@ function getActiveChatUserIds()
     return $ids;
 }
 
-// get mesage
+// get message
 function getMessages($user_id)
 {
     global $db;
@@ -405,7 +405,7 @@ function validateLoginForm($form_data)
     }
 
     if (!$blank && !checkUser($form_data)['status']) {
-        $response['msg'] = "Are you out of this world? Coz we can't find you :(";
+        $response['msg'] = "Login Failed. Please try again :(";
         $response['status'] = false;
         $response['field'] = 'checkuser';
     } else {
