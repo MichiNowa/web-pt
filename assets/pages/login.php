@@ -11,7 +11,7 @@
 
                 <img class="mb-4" src="assets/images/logo-black.png" alt="" height="45">
             </div>
-            <h1 class="h5 mb-3 fw-normal">Please sign in</h1>
+            <h1 class="h5 mb-3 fw-normal" style="color: #ff5500;">Please sign in</h1>
 
             <div class="form-floating">
                 <input type="text" name="username_email" value="<?= showFormData('username_email') ?>"
