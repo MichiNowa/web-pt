@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sign-in</title>
-</head>
-<body>
-<div class="login" style="background-color: #1f1f1f;">
+<style>
+    body {
+        background-color: #1f1f1f;
+    }
+</style>
+
+<div class="login container" style="background-color: #1f1f1f;">
     <div class="col-lg-4 col-md-8 col-sm-12 bg-white border p-4 shadow-sm" style="border-radius: 25px;">
         <form method="post" action="assets/php/actions.php?signup">
             <div class="d-flex justify-content-center">
@@ -17,12 +15,12 @@
             <div class="d-flex">
                 <div class="form-floating mt-1 col-6 ">
                     <input type="text" name="first_name" value="<?= showFormData('first_name') ?>"
-                        class="form-control rounded-0 " placeholder="username/email">
+                        class="form-control rounded-5 " placeholder="username/email">
                     <label for="floatingInput" >First Name</label>
                 </div>
                 <div class="form-floating mt-1 col-6">
                     <input type="text" name="last_name" value="<?= showFormData('last_name') ?>"
-                        class="form-control rounded-0 " placeholder="username/email">
+                        class="form-control rounded-5 " placeholder="username/email">
                     <label for="floatingInput" >Last Name</label>
                 </div>
             </div>
@@ -53,7 +51,7 @@
                 </div>
             </div>
             <div class="form-floating mt-1">
-                <input type="email" name="email" value="<?= showFormData('email') ?>" class="form-control rounded-0 "
+                <input type="email" name="email" value="<?= showFormData('email') ?>" class="form-control rounded-5 "
                     placeholder="username/email">
                 <label for="floatingInput">Email Address</label>
             </div>
@@ -61,7 +59,7 @@
 
             <div class="form-floating mt-1">
                 <input type="text" name="username" value="<?= showFormData('username') ?>"
-                    class="form-control rounded-0 " placeholder="username/email">
+                    class="form-control rounded-5 " placeholder="username/email">
                 <label for="floatingInput" >Username</label>
             </div>
             <?= showError('username') ?>
@@ -71,7 +69,7 @@
                     Password</small>
             </div>
             <div class="form-floating mt-1">
-                <input type="password" name="password" class="form-control rounded-0 " id="floatingPassword"
+                <input type="password" name="password" class="form-control rounded-5 " id="floatingPassword"
                     placeholder="Password">
                 <label for="floatingPassword" >Password</label>
             </div>
@@ -101,5 +99,3 @@
         }
     }
 </script>
-</body>
-</html>
