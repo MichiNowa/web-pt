@@ -7,7 +7,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body bg-dark">
-          <img src="" style="display:none" id="post_img" class="w-100 rounded border">
+<img src="" style="display:none" id="post_img" class="w-100 rounded border">          
           <form method="post" action="assets/php/actions.php?addpost" enctype="multipart/form-data">
             <div class="my-3">
               <input class="form-control bg-dark" style="color: #ff5500;" name="post_img" type="file" id="select_post_img">
@@ -43,14 +43,14 @@
         }
         $fbtn = '';
         ?>
-        <div class="d-flex justify-content-between border-bottom" >
+        <div class="d-flex justify-content-between " style="border-bottom:1px solid #ff5500;" >
           <div class="d-flex align-items-center p-2">
             <div><img src="assets/images/profile/<?= $fuser['profile_pic'] ?>" alt="" height="40" width="40"
                 class="rounded-circle border">
             </div>
             <div>&nbsp;&nbsp;</div>
             <div class="d-flex flex-column justify-content-center" <?= $post ?>>
-              <a href='?u=<?= $fuser['username'] ?>' class="text-light">
+              <a href='?u=<?= $fuser['username'] ?>' class="text-decoration-none text-light">
                 <h6 style="margin: 0px;font-size: small;"><?= $fuser['first_name'] ?>     <?= $fuser['last_name'] ?></h6>
               </a>
               <p style="margin:0px;font-size:small" class="<?= $not['read_status'] ? 'text-light' : '' ?>">

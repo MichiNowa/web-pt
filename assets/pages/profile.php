@@ -144,7 +144,7 @@ foreach($profile_post as $post){
                             </div>
                             <div>&nbsp;&nbsp;&nbsp;</div>
                             <div class="d-flex flex-column justify-content-start">
-                                <h6 style="margin: 0px;"><?=$profile['first_name']?> <?=$profile['last_name']?></h6>
+                                <h6 style="margin: 0px;" ><?=$profile['first_name']?> <?=$profile['last_name']?></h6>
                                 <p style="margin:0px;" class="text-light">@<?=$profile['username']?></p>
                             </div>
                             <div class="d-flex flex-column align-items-end flex-fill">
@@ -186,11 +186,11 @@ foreach($comments as $comment){
     $cuser = getUser($comment['user_id']);
     ?>
 <div class="d-flex align-items-center p-2">
-                                <div><img src="assets/images/profile/<?=$cuser['profile_pic']?>" alt="" height="40" width="40" class="rounded-circle border">
+                                <div><img src="assets/images/profile/<?=$cuser['profile_pic']?>" alt="" height="40" width="40" class="rounded-circle ">
                                 </div>
                                 <div>&nbsp;&nbsp;&nbsp;</div>
-                                <div class="d-flex flex-column justify-content-start align-items-start">
-                                    <h6 style="margin: 0px;"><a href="?u=<?=$cuser['username']?>" class="text-decoration-none text-light`">@<?=$cuser['username']?></a> - <?=$comment['comment']?></h6>
+                                <div class="d-flex flex-column justify-content-start align-items-start ">
+                                    <h6 style="margin: 0px;"><a href="?u=<?=$cuser['username']?>" class="text-decoration-none `" style="color:#ff5500;">@<?=$cuser['username']?></a> - <?=$comment['comment']?></h6>
                                     <p style="margin:0px;" class="text-light"><?=show_time($comment['created_at'])?></p>
                                 </div>
                             </div>
@@ -208,7 +208,7 @@ foreach($comments as $comment){
                         <?php
                         if(checkFollowStatus($profile['id']) || $profile['id']==$user['id']){
                             ?>
-  <div class="input-group p-2 border-top bg-dark text-light">
+  <div class="input-group p-2 bg-dark text-light" style="border-top: 1px solid #ff5500;">
                             <input type="text" class="form-control rounded-0 border-0 comment-input bg-dark text-light" placeholder="say something.."
                                 aria-label="Recipient's username" aria-describedby="button-addon2">
                             <button class="btn btn-outline  add-comment text-light" style="background-color: #ff5500; border-radius:15px;" data-cs="comment-section<?=$post['id']?>" data-post-id="<?=$post['id']?>" type="button"
@@ -217,7 +217,7 @@ foreach($comments as $comment){
                             <?php
                         }else{
                             ?>
-<div class="text-center p-2">
+<div class="text-center p-2 text-light" style="background-color: #ff5500;">
 if you want to comment follow this user</div>
                         
                             <?php

@@ -69,7 +69,7 @@
                 </div>
                 <!-- image for post -->
                     <img src="assets/images/posts/<?=$post['post_img']?>" loading=lazy class="" alt="..." style="max-width: 100%">
-                    <h4 style="font-size: x-larger" class="p-2 border-bottom d-flex">
+                    <h4 style="font-size: x-larger;border-bottom:1px solid #ff5500;" class="p-2 d-flex">
                     <span>
 
                     <!-- liked post or not -->
@@ -83,7 +83,7 @@
                     }
                 ?>
  <!-- icons for heart and ocmment -->
-                <i class="bi bi-heart-fill unlike_btn text-danger" style="display:<?=$unlike_btn_display?>" data-post-id='<?=$post['id']?>'></i>
+                <i class="bi bi-heart-fill unlike_btn text-danger" style=";display:<?=$unlike_btn_display?>" data-post-id='<?=$post['id']?>'></i>
                 <i class="bi bi-heart like_btn" style="display:<?=$like_btn_display?>" data-post-id='<?=$post['id']?>'></i>
 
                 </span>  
@@ -106,7 +106,7 @@
 }
     ?>
             <!-- comments -->
-            <div class="input-group p-2 <?=$post['post_text']?'border-top':''?>">
+            <div class="input-group p-2 <?=$post['post_text']?' ':''?>">
                  
                  <input type="text" class="form-control border-0 mr-4 comment-input bg-dark text-light"style="border-radius:15px;"  placeholder="comment on this post"
                          aria-label="Recipient's username" aria-describedby="button-addon2">
@@ -178,7 +178,7 @@ foreach($comments as $comment){
                                 </div>
                                 <div>&nbsp;&nbsp;&nbsp;</div>
                                 <div class="d-flex flex-column justify-content-start align-items-start">
-                                    <h6 style="margin: 0px;"><a href="?u=<?=$cuser['username']?>" class="text-decoration-none text-dark text-small text-muted">@<?=$cuser['username']?></a> - <?=$comment['comment']?></h6>
+                                    <h6 style="margin: 0px;"><a href="?u=<?=$cuser['username']?>" class="text-decoration-none  text-small "style="color:#ff5500;">@<?=$cuser['username']?></a> - <?=$comment['comment']?></h6>
                                     <p style="margin:0px;" class="text-muted">(<?=show_time($comment['created_at'])?>)</p>
                                 </div>
                             </div>
@@ -188,7 +188,7 @@ foreach($comments as $comment){
                           ?>
 
                         </div>
-                        <div class="input-group p-2 border-top" style="border-color: #ff5500;">
+                        <div class="input-group p-2" style="border-top:1px solid #ff5500;">
                             <input type="text" class="form-control rounded-0 border-0 comment-input bg-dark text-light" placeholder="say something.."
                                 aria-label="Recipient's username" aria-describedby="button-addon2">
                             <button  class="btn btn-outline add-comment text-light " style="background-color: #ff5500;border-radius:15px;" data-cs="comment-section<?=$post['id']?>" data-post-id="<?=$post['id']?>" type="button"
