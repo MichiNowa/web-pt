@@ -13,8 +13,13 @@
         border: none;
     }
     .button:hover{
-background-color: #ff6600;
-}
+    background-color: #ff6600;
+    }
+    .hey:hover{
+            background-color: black;
+            color: white
+    }
+
 </style>
 <?php 
  global $user;
@@ -53,7 +58,7 @@ background-color: #ff6600;
   <div class="dropdown">
         <i class="bi bi-three-dots-vertical" id="option<?=$post['id']?>" data-bs-toggle="dropdown" aria-expanded="false"></i>
         <ul class="dropdown-menu bg-dark" aria-labelledby="option<?=$post['id']?>">
-            <li><a class="dropdown-item" style="background-color: #1f1f1f; color:#ff5500;" href="assets/php/actions.php?deletepost=<?=$post['id']?>"><i class="bi bi-trash-fill"></i> Delete Post</a></li>
+            <li><a class="dropdown-item text-danger hey" href="assets/php/actions.php?deletepost=<?=$post['id']?>"><i class="bi bi-trash-fill"></i> Delete Post</a></li>
         </ul>
 </div>
     <?php

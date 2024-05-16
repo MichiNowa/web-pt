@@ -36,13 +36,13 @@
 
             <div class="d-flex">
                 <div class="form-floating mt-1 col-6 ">
-                    <input type="text" name="first_name" value="<?= $user['first_name'] ?>" class="form-control rounded-0 text-light bg-dark border-0"
+                    <input type="text" name="first_name" value="<?= $user['first_name'] ?>" class="form-control rounded-5 text-light bg-dark border-0"
                         placeholder="username/email">
                     <label for="floatingInput" class="text-light">First Name</label>
                 </div>
                 
                 <div class="form-floating mt-1 col-6">
-                    <input type="text" name="last_name" value="<?= $user['last_name'] ?>" class="form-control rounded-4 text-light bg-dark border-0"
+                    <input type="text" name="last_name" value="<?= $user['last_name'] ?>" class="form-control rounded-5 text-light bg-dark border-0"
                         placeholder="username/email">
                     <label for="floatingInput" class="text-light">Last Name</label>
                 </div>
@@ -53,23 +53,23 @@
             <?= showError('first_name') ?>
             <?= showError('last_name') ?>
             <div class="form-floating mt-1">
-                <input type="email" value="<?= $user['email'] ?>" class="form-control rounded-0 text-light bg-dark border-0" placeholder="email"
-                    disabled;">
-                <label for="floatingInput" class="text-light">Email</label>
+                <input type="email" value="<?= $user['email'] ?>" class="form-control rounded-5 text-muted bg-dark border-0" placeholder="email"
+                    disabled>
+                <label for="floatingInput" class="text-muted">Email</label>
             </div>
             <div class="form-floating mt-1">
-                <input type="text" value="<?= $user['username'] ?>" name="username" class="form-control rounded-0 text-light bg-dark border-0"
+                <input type="text" value="<?= $user['username'] ?>" name="username" class="form-control rounded-5 text-light bg-dark border-0"
                     placeholder="username/email">
                 <label for="floatingInput" class="text-light">Username</label>
             </div>
             <?= showError('username') ?>
         
             <div class="text-end mt-2">
-                <input type="checkbox"  name="pswd_show" id="pswd_show" onclick="pswd_toggle()"><small style="color:#ff5500;"><b>Show
-                    Password</b> </small>
+                <input type="checkbox"  name="pswd_show" id="pswd_show" onclick="pswd_toggle()"><small style="color:#ff5500;"> Show
+                    Password</small>
             </div>
             <div class="form-floating mt-1">
-                <input type="password"  name="password" class="form-control rounded-0 bg-dark text-light border-0"  id="floatingPassword"
+                <input type="password"  name="password" class="form-control rounded-5 bg-dark text-light border-0"  id="floatingPassword"
                     placeholder="Password">
 
                 <label for="floatingPassword" class="text-light">New Password</label>
