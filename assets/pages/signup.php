@@ -3,7 +3,7 @@
         background-color: #1f1f1f;
     }
 </style>
-
+<!-- regiuster form -->
 <div class="login container" style="background-color: #1f1f1f;">
     <div class="col-lg-4 col-md-8 col-sm-12 bg-white border p-4 shadow-sm" style="border-radius: 25px;">
         <form method="post" action="assets/php/actions.php?signup">

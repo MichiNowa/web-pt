@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta author="MichiNowa, ArvinJay, LhilKim">
     <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/bootstrap/icons/bootstrap-icons.css" rel="stylesheet">
     <link href="assets/css/custom.css" rel="stylesheet">
@@ -14,3 +15,5 @@
 </head>
 
 <body>
+
+<!-- header for the pages, links every page to the stylesheet -->

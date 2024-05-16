@@ -1,7 +1,7 @@
 <?php
 session_start();
-// connect to dataabse
-const DB_NAME = 'michi';
+// connect to dataabse in 000webhost
+const DB_NAME = 'id22172138_michi';
 const DB_HOST = 'localhost';
-const DB_USER = 'root';
-const DB_PASS = '';
+const DB_USER = 'id22172138_michi';
+const DB_PASS = 'Michi@13';

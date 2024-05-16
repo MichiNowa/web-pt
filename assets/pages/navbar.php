@@ -1,22 +1,21 @@
-
-    <style>
-        .hey{
-            color:white;
-        }
-        .hey:hover{
-            background-color: black;
-            color: white
-        }
-    </style>
+<style>
+    .hey{
+        color:white;
+    }
+    .hey:hover{
+        background-color: black;
+        color: white
+    }
+</style>
     <?php global $user;?>
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: black;">
         <div class="container col-lg-9 col-sm-12 col-md-10 d-flex flex-lg-row flex-md-row flex-sm-column justify-content-between">
             <div class="d-flex justify-content-between col-lg-8 col-sm-12 " style="background-color: black;">
+            <!-- logo -->
                 <a class="navbar-brand" href="?">
                     <img src="assets/images/logo.png" alt="" height="28">
-
                 </a>
-
+            <!-- searchbar -->
                 <form class="d-flex" id="searchform">
         <input class="form-control me-0 bg-dark text-light border-0" type="search" id="search"
           placeholder="Search for other users" aria-label="Search" autocomplete="off" style="background-color: #F8E5E5;">
@@ -30,17 +29,18 @@
       </form>
 
             </div>
-
-
             <ul class="navbar-nav flex-fill flex-row justify-content-evenly mb-lg-1 mb-sm-0" style="background-color: black;">
-
+                <!-- home nav -->
                 <li class="nav-item">
                     <a class="nav-link text-light" href="?"><i class="bi bi-house-door-fill" title="Home"></i></a>
                 </li>
+
+                <!-- add post nav -->
                 <li class="nav-item">
                     
                     <a class="nav-link text-light" data-bs-toggle="modal" data-bs-target="#addpost" href="#"><i class="bi bi-plus-square-fill" title="Add Post"></i></a>
                 </li>
+                <!-- notif nav -->
                 <li class="nav-item">
                   
                     
@@ -61,9 +61,9 @@ if(getUnreadNotificationsCount()>0){
     <?php
 }
                     ?>
-                   
-
                 </li>
+
+                <!-- message nav -->
                 <li class="nav-item">
                     <a class="nav-link text-light" data-bs-toggle="offcanvas" href="#message_sidebar" href="#"><i class="bi bi-chat-dots-fill" title="Messages"></i>  <span class="un-count position-absolute start-10 translate-middle badge p-1 rounded-pill bg-danger" id="msgcounter">
   

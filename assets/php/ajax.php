@@ -25,7 +25,7 @@ if (isset($_GET['getmessages'])) {
             $seen = true;
         }
         $chatlist .= '  
-    <div class="d-flex justify-content-between border-bottom  chatlist_item" data-bs-toggle="modal" data-bs-target="#chatbox" onclick="popchat(' . $chat['user_id'] . ')" >
+    <div style="border-bottom:1px solid #ff5500;" class="d-flex justify-content-between chatlist_item" data-bs-toggle="modal" data-bs-target="#chatbox" onclick="popchat(' . $chat['user_id'] . ')" >
                         <div class="d-flex align-items-center p-2">
                             <div><img src="assets/images/profile/' . $ch_user['profile_pic'] . '" alt="" height="40" width="40" class="rounded-circle border">
                             </div>
@@ -39,11 +39,6 @@ if (isset($_GET['getmessages'])) {
                         <div class="d-flex align-items-center">
       
                           <div class="p-1 bg-primary rounded-circle ' . ($seen ? 'd-none' : '') . '"></div>
-    
-
-    
-
-    
     
                         </div>
                     </div>';
@@ -68,7 +63,7 @@ if (isset($_GET['getmessages'])) {
             if ($cm['from_user_id'] == $_SESSION['userdata']['id']) {
                 $cl1 = 'align-self-end text-dark ';
                 $cl2 = 'text-muted';
-                $sty = 'background-color: #ffb999;';
+                $sty = 'background-color: #ffb999; border:1px solid #ff5500;';
 
             } else {
                 $cl1 = 'bg-dark';

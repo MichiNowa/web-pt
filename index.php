@@ -1,6 +1,6 @@
 <?php
 
-// this page serves as the parent page which calls elmemtns pages folder arun ma-isa ra tanan
+// this page serves as the initial page
 
 require_once 'assets/php/functions.php';
 if (isset($_GET['newfp'])) {
@@ -63,6 +63,7 @@ if (isset($_SESSION['Auth']) && !$pagecount) {
 
 }
 
+//footer for pages
 showPage('footer');
 unset($_SESSION['error']);
 unset($_SESSION['formdata']);

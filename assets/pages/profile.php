@@ -1,14 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
-</head>
 <body style="background-color: #1f1f1f;">
 <style>
     .msg:hover{
-background-color: black;
+    background-color: black;
     }
 </style>
 <?php
@@ -136,8 +129,6 @@ foreach($profile_post as $post){
                         <img src="assets/images/posts/<?=$post['post_img']?>" style="max-height:90vh" class="w-100 rounded-start">
                     </div>
 
-
-
                     <div class="col-md-4 col-sm-12 d-flex flex-column" >
                         <div style="background-color: #ff5500;" class="d-flex align-items-center p-2 text-light" <?=$post['post_text']?'':' '?>">
                             <div><img src="assets/images/profile/<?=$profile['profile_pic']?>" alt="" height="50" width="50" class="rounded-circle border">
@@ -170,7 +161,7 @@ foreach($profile_post as $post){
                  
 </div>
                         </div>
-<div class=" p-2 text-light <?=$post['post_text']?'':'d-none'?>"><?=$post['post_text']?> </div>
+<div style="background-color: #ffb999;" class=" p-2 text-dark <?=$post['post_text']?'':'d-none'?>"><?=$post['post_text']?> </div>
 
 
                         <div class="flex-fill align-self-stretch overflow-auto bg-dark text-light" id="comment-section<?=$post['id']?>" style="height: 100px;">
@@ -236,20 +227,8 @@ if you want to comment follow this user</div>
     <?php
 }
             ?>
-           
-
         </div>
-
-
-
-
     </div>
-
-  
-    <!-- Modal -->
-    
-     
-
 
     <!-- this is for follower list -->
     <div class="modal fade" id="follower_list" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -344,5 +323,3 @@ foreach($profile['following'] as $f){
         </div>
   </div>
 </div>
-</body>
-</html>
