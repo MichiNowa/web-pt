@@ -255,7 +255,7 @@ foreach($profile['followers'] as $f){
 <div class="d-flex justify-content-between">
                     <div class="d-flex align-items-center p-2">
                         <div><img src="assets/images/profile/<?=$fuser['profile_pic']?>" alt="" height="40" width="40" class="rounded-circle border">
-                        </div> text-light
+                        </div>
                         <div>&nbsp;&nbsp;</div>
                         <div class="d-flex flex-column justify-content-center">
                             <a href='?u=<?=$fuser['username']?>' class="text-decoration-none text-light"><h6 style="margin: 0px;font-size: small;"><?=$fuser['first_name']?> <?=$fuser['last_name']?></h6></a>
