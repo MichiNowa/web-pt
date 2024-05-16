@@ -10,11 +10,11 @@
 <img src="" style="display:none" id="post_img" class="w-100 rounded border">          
           <form method="post" action="assets/php/actions.php?addpost" enctype="multipart/form-data">
             <div class="my-3">
-              <input class="form-control bg-dark text-light" name="post_img" type="file" id="select_post_img">
+              <input class="form-control bg-dark text-light"style="border-color: #ff5500;" name="post_img" type="file" id="select_post_img">
             </div>
             <div class="mb-3">
               <label for="exampleFormControlTextarea1" class="form-label text-light" >What's your Code about?</label>
-              <textarea name="post_text" class="form-control bg-dark text-light" id="exampleFormControlTextarea1" rows="1"></textarea>
+              <textarea name="post_text" style="border-color: #ff5500;" class="form-control bg-dark text-light" id="exampleFormControlTextarea1" rows="1"></textarea>
             </div>
 
             <button type="submit" class="btn btn text-light" style="background-color: #ff5500;">Post</button>

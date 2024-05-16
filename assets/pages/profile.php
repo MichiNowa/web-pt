@@ -102,7 +102,7 @@ if(checkBlockStatus($user['id'],$profile['id'])){
 
 
         </div>
-        <h3 class="border-bottom " style="border-color:#ff5500;color:#ff5500;">Posts</h3>
+        <h3 class=" " style="border-bottom:1px solid #ff5500;color:#ff5500;">Posts</h3>
         <?php
 
 if(checkBS($profile['id'])){
