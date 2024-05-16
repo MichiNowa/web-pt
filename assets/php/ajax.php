@@ -48,11 +48,11 @@ if (isset($_GET['getmessages'])) {
                         </div>
                     </div>';
 
-    } 
+    }
     $json['chatlist'] = $chatlist;
 
 
- 
+
     if (isset($_POST['chatter_id']) && $_POST['chatter_id'] != 0) {
         $messages = getMessages($_POST['chatter_id']);
         $chatmsg = "";
@@ -66,16 +66,18 @@ if (isset($_GET['getmessages'])) {
 
         foreach ($messages as $cm) {
             if ($cm['from_user_id'] == $_SESSION['userdata']['id']) {
-                $cl1 = 'align-self-end bg-primary text-light ';
-                $cl2 = 'text-light';
+                $cl1 = 'align-self-end text-light ';
+                $cl2 = 'text-muted';
+                $sty = 'background-color: #913000;';
 
             } else {
-                $cl1 = '';
+                $cl1 = 'bg-dark';
                 $cl2 = 'text-muted';
+                $sty = '';
             }
 
-            $chatmsg .= ' <div class="py-2 px-3 border rounded shadow-sm col-8 d-inline-block ' . $cl1 . '">' . $cm['msg'] . '<br>
-    <span style="font-size:small" class="' . $cl2 . '">' . gettime($cm['created_at']) . '</span>
+            $chatmsg .= ' <div style="'. $sty .'" class="py-2 px-3 border rounded shadow-sm col-8 d-inline-block ' . $cl1 . '">' . $cm['msg'] . '<br>
+    <span style="font-size:small;" class="' . $cl2 . '">' . gettime($cm['created_at']) . '</span>
 </div>';
         }
         $json['chat']['msgs'] = $chatmsg;
@@ -187,7 +189,7 @@ if (isset($_GET['addcomment'])) {
         $time = date("Y-m-d H:i:s");
         $response['status'] = true;
         $response['comment'] = '<div class="d-flex align-items-center p-2">
-            <div><img src="assets/images/profile/' . $cuser['profile_pic'] . '" alt="" height="40" class="rounded-circle border">
+            <div><img src="assets/images/profile/' . $cuser['profile_pic'] . '" alt="" height="40" width="40" class="rounded-circle border">
             </div>
             <div>&nbsp;&nbsp;&nbsp;</div>
             <div class="d-flex flex-column justify-content-start align-items-start">
@@ -217,7 +219,7 @@ if (isset($_GET['search'])) {
 
         foreach ($data as $fuser) {
             $fbtn = '';
- 
+
 
             $users .= ' <div class="d-flex justify-content-between">
                             <div class="d-flex align-items-center p-2">
@@ -248,4 +250,3 @@ if (isset($_GET['search'])) {
 
     echo json_encode($response);
 }
- 

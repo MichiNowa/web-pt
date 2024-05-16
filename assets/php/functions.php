@@ -181,7 +181,7 @@ function addComment($post_id, $comment)
 }
 
 
-//function for creating comments
+//function for creating notifs
 function createNotification($from_user_id, $to_user_id, $msg, $post_id = 0)
 {
     global $db;

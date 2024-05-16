@@ -102,29 +102,29 @@
     </div> 
   </div>
 
-  <div class="modal fade" id="chatbox" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade"  id="chatbox" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content bg-dark">
+      <div class="modal-content" style="background-color:black;">
         <div class="modal-header text-light" style="background-color:#ff5500;">
           <a href="" id="cplink" class="text-decoration-none text-light">
             <h5 class="modal-title" id="exampleModalLabel"><img src="assets/images/profile/default_profile.jpg"
                 id="chatter_pic" height="40" width="40" class="m-1 rounded-circle "><span
-                id="chatter_name"></span>(@<span id="chatter_username">loading..</span>)</h5>
+                id="chatter_name"></span> (@<span id="chatter_username">loading..</span>)</h5>
                 
           </a>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body bg-dark d-flex flex-column-reverse gap-2 text-light" id="user_chat">
+        <div class="modal-body d-flex flex-column-reverse gap-2 text-light" id="user_chat" style="background-color:black;">
           loading..
         </div> 
         <div class="modal-footer">
 
           <p class="p-2 text-danger mx-auto" id="blerror" style="display:none">
-            <i class="bi bi-x-octagon-fill"></i> you are not allowed to send msg to this user anymore
+            <i class="bi bi-x-octagon-fill"></i> You are not allowed to interact with this user
         </div>
-        <div class="input-group p-2 " id="msgsender">
+        <div class="input-group p-2 rounded-2" id="msgsender">
           <input type="text" class="form-control border-0 bg-dark text-light" id="msginput" placeholder="say something.."
-            aria-label="Recipient's username" aria-describedby="button-addon2">
+            aria-label="Recipient's username" aria-describedby="button-addon2" style="border-radius:5px;">
           <button class="btn btn  text-light" style="background-color: #ff5500;border-radius:15px;" id="sendmsg" data-user-id="0"
             type="button">Send</button>
         </div>
@@ -147,7 +147,7 @@
 <footer style="background-color: #1f1f1f;">
 <hr>
   <div class="mt-2 text-center ">
-    <img src="../images/logo.png" alt="" width="150px">
+    <img src="assets/images/logo.png" alt="" width="150px">
       <p class="copyright-text">
         <small class="col-12 mt-auto mb-5 text-muted">Copyright © 2024 MAL Company - Michi Arvin Lhil Company</small>
       </p>

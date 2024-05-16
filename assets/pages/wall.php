@@ -77,7 +77,7 @@ background-color: #ff6600;
                         $unlike_btn_display='none';  
                     }
                 ?>
- 
+ <!-- icons for heart and ocmment -->
                 <i class="bi bi-heart-fill unlike_btn text-danger" style="display:<?=$unlike_btn_display?>" data-post-id='<?=$post['id']?>'></i>
                 <i class="bi bi-heart like_btn" style="display:<?=$like_btn_display?>" data-post-id='<?=$post['id']?>'></i>
 
