@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>sign-in</title>
 </head>
 <body>
 <div class="login" style="background-color: #1f1f1f;">
@@ -55,7 +55,7 @@
             <div class="form-floating mt-1">
                 <input type="email" name="email" value="<?= showFormData('email') ?>" class="form-control rounded-0 "
                     placeholder="username/email">
-                <label for="floatingInput" style="color:white;">Email Address</label>
+                <label for="floatingInput">Email Address</label>
             </div>
             <?= showError('email') ?>
 
