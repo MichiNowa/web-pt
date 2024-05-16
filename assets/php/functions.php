@@ -453,21 +453,6 @@ function getUser($user_id)
 
 }
 
-
-//for filtering the suggestion list
-function filterFollowSuggestion()
-{
-    $list = getFollowSuggestions();
-    $filter_list = array();
-    foreach ($list as $user) {
-        if (!checkFollowStatus($user['id']) && !checkBS($user['id']) && count($filter_list) < 5) {
-            $filter_list[] = $user;
-        }
-    }
-
-    return $filter_list;
-}
-
 //for checking the user is followed by current user or not
 function checkFollowStatus($user_id)
 {
@@ -496,18 +481,6 @@ function checkBS($user_id)
     $query = "SELECT count(*) as row FROM block_list WHERE (user_id=$current_user && blocked_user_id=$user_id) || (user_id=$user_id && blocked_user_id=$current_user)";
     $run = mysqli_query($db, $query);
     return mysqli_fetch_assoc($run)['row'];
-}
-//
-
-//for getting users for follow suggestions
-function getFollowSuggestions()
-{
-    global $db;
-
-    $current_user = $_SESSION['userdata']['id'];
-    $query = "SELECT * FROM users WHERE id!=$current_user";
-    $run = mysqli_query($db, $query);
-    return mysqli_fetch_all($run, true);
 }
 
 //get followers count
@@ -732,7 +705,7 @@ function validatePostImage($image_data)
         $response['field'] = 'post_img';
     }
 
-     
+
 
     if ($image_data['name']) {
         $image = basename($image_data['name']);

@@ -14,7 +14,7 @@
                 <?php
                 if (isset($_GET['success'])) {
                     ?>
-                    <p class="text-success text-success">Profile has been updated!</p>
+                    <p style="text-align:center;" class="text-light bg-success rounded-2 p-1">Profile has been updated!</p>
                     <?php
                 }
                 ?>

@@ -9,7 +9,6 @@ if (isset($_GET['newfp'])) {
 if (isset($_SESSION['Auth'])) {
     $user = getUser($_SESSION['userdata']['id']);
     $posts = filterPosts();
-    $follow_suggestions = filterFollowSuggestion();
 }
 
 $pagecount = count($_GET);
@@ -47,10 +46,6 @@ if (isset($_SESSION['Auth']) && !$pagecount) {
 
     showPage('header', ['page_title' => 'CodeSphere - Login']);
     showPage('login');
-} elseif (isset($_GET['forgotpassword'])) {
-
-    showPage('header', ['page_title' => 'CodeSphere - Forgot Password']);
-    showPage('forgot_password');
 } else {
     if (isset($_SESSION['Auth'])) {
         showPage('header', ['page_title' => 'CodeSphere - Home']);
@@ -67,10 +62,3 @@ if (isset($_SESSION['Auth']) && !$pagecount) {
 showPage('footer');
 unset($_SESSION['error']);
 unset($_SESSION['formdata']);
-
-
-
-
-
-
-

@@ -12,6 +12,13 @@
                 <img class="mb-4" src="assets/images/logo-black.png" alt="" height="45">
             </div>
             <h1 class="h5 mb-3 fw-normal" style="color:#ff5500;">Create new account</h1>
+            <?php
+                if (isset($_GET['newuser'])) {
+                    ?>
+                    <p style="text-align:center;" class="text-light bg-success rounded-2 p-1">Register Successful</p>
+                    <?php
+                }
+                ?>
             <div class="d-flex">
                 <div class="form-floating mt-1 col-6 ">
                     <input type="text" name="first_name" value="<?= showFormData('first_name') ?>"

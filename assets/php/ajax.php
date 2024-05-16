@@ -33,7 +33,7 @@ if (isset($_GET['getmessages'])) {
                             <div class="d-flex flex-column justify-content-center" >
                                 <a href="#" class="text-decoration-none text-light"><h6 style="margin: 0px;font-size: small;">' . $ch_user['first_name'] . ' ' . $ch_user['last_name'] . '</h6></a>
                                 <p style="margin:0px;font-size:small" class="">' . $chat['messages'][0]['msg'] . '</p>
-                                <time style="font-size:small" class="timeago text-small" datetime="' . $chat['messages'][0]['created_at'] . '">' . gettime($chat['messages'][0]['created_at']) . '</time>
+                                <time style="font-size:small" class="timeago text-muted text-small" datetime="' . $chat['messages'][0]['created_at'] . '">' . gettime($chat['messages'][0]['created_at']) . '</time>
                             </div>
                         </div>
                         <div class="d-flex align-items-center">
@@ -71,9 +71,9 @@ if (isset($_GET['getmessages'])) {
                 $sty = '';
             }
 
-            $chatmsg .= ' <div style="'. $sty .'" class="py-2 px-3 border rounded shadow-sm col-8 d-inline-block ' . $cl1 . '">' . $cm['msg'] . '<br>
-    <span style="font-size:small;" class="' . $cl2 . '">' . gettime($cm['created_at']) . '</span>
-</div>';
+            $chatmsg .= ' <div style="' . $sty . '" class="py-2 px-3 border rounded shadow-sm col-8 d-inline-block ' . $cl1 . '">' . $cm['msg'] . '<br>
+                <span style="font-size:small;" class="' . $cl2 . '">' . gettime($cm['created_at']) . '</span>
+                </div>';
         }
         $json['chat']['msgs'] = $chatmsg;
         $json['chat']['userdata'] = getUser($_POST['chatter_id']);
@@ -177,8 +177,6 @@ if (isset($_GET['addcomment'])) {
     $post_id = $_POST['post_id'];
     $comment = $_POST['comment'];
 
-
-
     if (addComment($post_id, $comment)) {
         $cuser = getUser($_SESSION['userdata']['id']);
         $time = date("Y-m-d H:i:s");
@@ -195,11 +193,7 @@ if (isset($_GET['addcomment'])) {
     } else {
         $response['status'] = false;
     }
-
     echo json_encode($response);
-
-
-
 }
 
 // search other suser
