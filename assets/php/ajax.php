@@ -66,7 +66,7 @@ if (isset($_GET['getmessages'])) {
 
         foreach ($messages as $cm) {
             if ($cm['from_user_id'] == $_SESSION['userdata']['id']) {
-                $cl1 = 'align-self-end bg-primary text-light';
+                $cl1 = 'align-self-end bg-primary text-light ';
                 $cl2 = 'text-light';
 
             } else {
@@ -248,3 +248,4 @@ if (isset($_GET['search'])) {
 
     echo json_encode($response);
 }
+ 

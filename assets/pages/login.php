@@ -36,7 +36,7 @@
 
             <div class="mt-3 d-flex justify-content-between align-items-center">
             <button class="btn btn text-light" style="background-color: #ff5500;" >Sign in</button>
-                <a href="?signup" class="text-decoration-none" >Create New Account</a>
+                <a href="?signup" class="text-decoration-none"style="color:#ff5500;" >Create New Account</a>
 
 
             </div>

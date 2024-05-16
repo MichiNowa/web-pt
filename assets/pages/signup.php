@@ -13,7 +13,7 @@
 
                 <img class="mb-4" src="assets/images/logo-black.png" alt="" height="45">
             </div>
-            <h1 class="h5 mb-3 fw-normal">Create new account</h1>
+            <h1 class="h5 mb-3 fw-normal" style="color:#ff5500;">Create new account</h1>
             <div class="d-flex">
                 <div class="form-floating mt-1 col-6 ">
                     <input type="text" name="first_name" value="<?= showFormData('first_name') ?>"
@@ -80,7 +80,7 @@
 
             <div class="mt-3 d-flex justify-content-between align-items-center">
                 <button class="btn btn text-light" style="background-color: #ff5500;" type="submit">Sign Up</button>
-                <a href="?login" class="text-decoration-none ">Already have an account ?</a>
+                <a href="?login" class="text-decoration-none " style="color:#ff5500;">Already have an account ?</a>
 
 
             </div>

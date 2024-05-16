@@ -16,7 +16,7 @@
 background-color: #ff6600;
 }
 </style>
-<?php
+<?php 
  global $user;
  global $posts;
  global $follow_suggestions;
@@ -103,9 +103,9 @@ background-color: #ff6600;
             <!-- comments -->
             <div class="input-group p-2 <?=$post['post_text']?'border-top':''?>">
                  
-                 <input type="text" class="form-control rounded-0 border-0 comment-input bg-dark text-light" placeholder="comment on this post"
+                 <input type="text" class="form-control border-0 mr-4 comment-input bg-dark text-light"style="border-radius:15px;"  placeholder="comment on this post"
                          aria-label="Recipient's username" aria-describedby="button-addon2">
-                     <button class="button"style="border-radius:15px;" data-page='wall' data-cs="comment-section<?=$post['id']?>" data-post-id="<?=$post['id']?>" type="button"
+                     <button class="button text-light add-comment"style="border-radius:15px;" data-page='wall' data-cs="comment-section<?=$post['id']?>" data-post-id="<?=$post['id']?>" type="button"
                          id="button-addon2">Post</button>
          </div>
 

@@ -21,7 +21,7 @@
 
           </form>
         </div>
-
+        
       </div>
     </div>
   </div>
@@ -110,17 +110,17 @@
             <h5 class="modal-title" id="exampleModalLabel"><img src="assets/images/profile/default_profile.jpg"
                 id="chatter_pic" height="40" width="40" class="m-1 rounded-circle "><span
                 id="chatter_name"></span>(@<span id="chatter_username">loading..</span>)</h5>
+                
           </a>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body bg-dark d-flex flex-column-reverse gap-2" id="user_chat">
+        <div class="modal-body bg-dark d-flex flex-column-reverse gap-2 text-light" id="user_chat">
           loading..
         </div> 
         <div class="modal-footer">
 
           <p class="p-2 text-danger mx-auto" id="blerror" style="display:none">
             <i class="bi bi-x-octagon-fill"></i> you are not allowed to send msg to this user anymore
-
         </div>
         <div class="input-group p-2 " id="msgsender">
           <input type="text" class="form-control border-0 bg-dark text-light" id="msginput" placeholder="say something.."
