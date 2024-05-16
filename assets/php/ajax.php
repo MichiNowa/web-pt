@@ -66,9 +66,9 @@ if (isset($_GET['getmessages'])) {
 
         foreach ($messages as $cm) {
             if ($cm['from_user_id'] == $_SESSION['userdata']['id']) {
-                $cl1 = 'align-self-end text-light ';
+                $cl1 = 'align-self-end text-dark ';
                 $cl2 = 'text-muted';
-                $sty = 'background-color: #913000;';
+                $sty = 'background-color: #ffb999;';
 
             } else {
                 $cl1 = 'bg-dark';
